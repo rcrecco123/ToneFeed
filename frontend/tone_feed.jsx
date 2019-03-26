@@ -6,6 +6,6 @@ import configureStore from './store/store';
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
-    const store = configureStore();
+    // const store = configureStore();
     ReactDOM.render(<h1>ToneFeed ;)</h1>, root);
 });
