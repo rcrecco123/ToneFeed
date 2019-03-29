@@ -18,8 +18,10 @@ export default () => (
     //will have to eventually apply my protected routes to pages I dont
     //want users without account to see
     <div>
-        <AuthRoute exact path='/signup' component={SignUpContainer} />
-        <Route exact path='/login' component={login_container} />
-        <Route path='/' component={SplashContainer} />
+        <Switch>
+            <AuthRoute exact path='/signup' component={SignUpContainer} />
+            <Route exact path='/login' component={login_container} />
+            <Route exact path='/' component={SplashContainer} />
+        </Switch>
     </div>
 )
