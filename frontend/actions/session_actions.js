@@ -9,10 +9,13 @@ export const LOGOUT_CURRENT_USER = "LOGOUT_CURENT_USER";
 
 //type + payload
 
-const receiveCurrentUser = user = => ({
-    type: RECEIVE_CURRENT_USER, //passed to recuder
-    user,
-});
+const receiveCurrentUser = ({ user }) => {
+    debugger
+    return {
+        type: RECEIVE_CURRENT_USER, //passed to recuder
+        user,
+    }
+};
 
 const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER,

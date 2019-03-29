@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Root from './components/root';
+import Root from './components/root.jsx';
 import configureStore from './store/store';
 
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
-    // const store = configureStore();
-    ReactDOM.render(<h1>ToneFeed ;)</h1>, root);
+    let preloadedState = undefined;
+    if (window.currentUser) {
+        preloadedState = {
+            session: {
+                currentUser: window.currentUser
+            }
+        };
+    }
+    const store = configureStore(preloadedState);
+    ReactDOM.render(<Root store={store} />, root);
 });
