@@ -1,0 +1,103 @@
+
+
+body, header, ul, li, div, img {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: absolute;
+    z-index: 9999;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    color: white;
+    font-size: 12px;
+    padding-left: 25px;
+    padding-top: 2px;
+}
+
+body {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.main-slider {
+    padding-top: 0px;
+    margin-top: 0%;
+    margin-right: auto;
+    margin-left: auto;
+    border-top: 5px;
+    width: 1240px;
+    height: 450px;
+    position: relative;
+
+    overflow-x: hidden;
+}
+.main-slider img {
+    display: block;
+}
+.main-slider-content {
+    list-style: none;
+    display: flex;
+    animation-duration: 8s;
+    animation-name: slide;
+    animation-iteration-count: infinite;
+    transform: translateX(-1240px);
+}
+
+@keyframes slide {
+    10%{
+        transform: translateX(0);
+    }
+    90%{
+        transform: translateX(-1240px);
+    }
+}
+
+.image-2-box {
+
+    color: white;
+}
+
+.image-1-text-box {
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    color: white;
+}
+.image-1-text {
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-1-text-body {
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-2-text {
+    color: white;
+    position: absolute;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    top: 40%;
+    left: 50%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    transform: translateX(1240px);
+}
+
+.image-2-text-body {
+    color: white;
+    position: absolute;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    top: 60%;
+    left: 50%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    transform: translateX(1240px);
+}

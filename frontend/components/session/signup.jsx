@@ -9,6 +9,7 @@ class Signup extends React.Component {
 
     constructor(props){
         super(props);
+
         this.state = {
             username: '',
             email: '',
@@ -22,7 +23,7 @@ class Signup extends React.Component {
     //takes input type
     handleInput(type) {
         //arrow function that sets state
-        return () => {
+        return (e) => {
             //keys that match state get updated
             //square brackets makes it evaluated before assigned to key
             this.setState({ [type]: e.target.value })
@@ -31,7 +32,7 @@ class Signup extends React.Component {
     //takes in an event
     handleSubmit(e) {
         //prevents default 'POST'
-        e.preventDefaultAction();
+        e.preventDefault();
         this.props.createNewUser(this.state)
             .then( () => this.props.history.push(''))
     }
@@ -45,21 +46,21 @@ class Signup extends React.Component {
                     <input 
                         type="text"
                         value={this.state.username}
-                        onChanged={this.handleInput('username')}
+                        onChange={this.handleInput('username')}
                     />
                 </label>
                 <label>Email:
                     <input 
                         type="text"
                         value={this.state.email}
-                        onChanged={this.handleInput('email')}
+                        onChange={this.handleInput('email')}
                     />
                 </label>
                 <label>Password:
                     <input 
-                        type="text"
+                        type="password"
                         value={this.state.password}
-                        onChanged={this.handleInput('password')}
+                        onChange={this.handleInput('password')}
                     />
                 </label>
                 <button onClick={this.handleSubmit}>Sign Up!</button>

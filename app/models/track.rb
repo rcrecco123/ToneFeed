@@ -10,23 +10,11 @@
 #
 
 class Track < ApplicationRecord
+    validates :title, :user_id, presence: true
 
-    def new
-    end
-
-    def create
-    end
-
-    def index
-    end
-
-    def show
-    end
-
-    def edit
-    end
-
-    def destroy
-    end
+    belongs_to :user,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :User
 
 end
