@@ -1,16 +1,15 @@
 // SPLASH PAGE!
 import React from 'react';
 
-
 class Splash extends React.Component {
 
     constructor(props) {
         super(props)
 
         // this.handleSubmit = this.handleSubmit.bind(this)
-    }
+    };
 
-
+    
     render() {
 
         return (
@@ -19,8 +18,8 @@ class Splash extends React.Component {
                     <header className="main-header">
                         <h1 className='header'>ToneFeed</h1>
                         <div className='buttons'>
-                            <button className="signin-button">Sign in</button>
-                            <button className="login-button">Create account</button>
+                            <button className="signin-button" onClick={() => this.props.openModal('login')}>Sign in</button>
+                            <button className="login-button" onClick={() => this.props.openModal('signup')}>Create account</button>
                         </div>
                     </header>
                     <ul className="main-slider-content">
