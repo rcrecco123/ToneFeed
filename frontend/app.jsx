@@ -3,8 +3,7 @@ import SignUpContainer from './components/session/signup_container';
 import login_container from './components/session/login_container';
 import SplashContainer from './components/splash_container';
 import Modal from './components/modal/modal';
-import UserShow from './components/user/user_show';
-import NavBar from './components/nav_bar/nav_bar';
+import NavBar from './components/nav_bar/nav_bar_container';
 import { AuthRoute,
         ProtectedRoute } from './utils/route_utils';
 import {
@@ -27,11 +26,11 @@ export default () => (
     <div>
         <Modal />
         <NavBar />
-        <UserShow /> 
        <Switch>
                   
             {/* <AuthRoute exact path='/signup' component={SignUpContainer} />
             <Route path='/login' component={login_container} /> */}
+            
             <Route exact path='/' component={SplashContainer} />
         </Switch>
     </div>

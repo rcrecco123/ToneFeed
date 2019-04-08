@@ -16,7 +16,7 @@ class Login extends React.Component {
             password: '',
         }
         
-        this.push = this.push.bind(this);
+        this.handle = this.handle.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
 
     }
@@ -31,9 +31,9 @@ class Login extends React.Component {
         };
     };
 
-    push() {
-        // debugger
-        this.props.history.push('/');
+    handle() {
+        this.props.closeModal();
+        this.props.history.push('/feed');
     }
 
     //takes in an event
@@ -41,10 +41,11 @@ class Login extends React.Component {
         //prevents default 'POST'
         e.preventDefault();
         this.props.processForm(this.state)
-            .then(this.push);
+            .then(this.handle);
         //push NOT invoked becuase we want it as a callback (returned function)
+        //anything passed to .then is not going to be invoked, meaning it is going to be a callback.
     }
-
+    
     render() {
         return (
             <div className="session-form">

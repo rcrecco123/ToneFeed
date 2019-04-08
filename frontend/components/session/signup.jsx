@@ -33,8 +33,7 @@ class Signup extends React.Component {
     //takes in an event
     
     push() {
-        // debugger
-        this.props.history.push('/user');
+        this.props.history.push('/feed');
     }
 
     handleSubmit(e) {
