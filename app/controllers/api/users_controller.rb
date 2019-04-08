@@ -1,5 +1,8 @@
 class Api::UsersController < ApplicationController
 
+    def new
+    end
+
     def create
         @user = User.new(user_params)
 
@@ -8,7 +11,6 @@ class Api::UsersController < ApplicationController
             render 'api/users/show'
             #THE USERS SHOW PAGE WILL BE MY FEED
         else
-            # debugger
             render json: @user.errors.full_messages, status: 422
         end
     end

@@ -1,5 +1,10 @@
 
-
+html {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: -50px;
+}
 body, header, ul, li, div, img {
     margin: 0;
     padding: 0;
@@ -21,6 +26,7 @@ header {
     padding-left: 25px;
     padding-top: 2px;
     width: 1200px;
+    border: 25px;
 }
 
 .buttons  {
@@ -60,8 +66,7 @@ body {
     padding-top: 0px;
     margin-top: 0%;
     margin-right: auto;
-    margin-left: auto;
-    margin: 0 auto;
+    margin-left: -50px;
     border-top: 5px;
     width: 1240px;
     height: 450px;
@@ -76,7 +81,7 @@ body {
 .main-slider-content {
     list-style: none;
     display: flex;
-    animation-duration: 35s;
+    animation-duration: 12s;
     animation-name: slide;
     animation-iteration-count: infinite;
     transform: translateX(-1240px);

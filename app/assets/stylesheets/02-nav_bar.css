@@ -1,0 +1,79 @@
+.bar {
+    width: 1240px;
+    height: 70px;
+    position: relative;
+    margin-left: -50px;
+    color: white;
+    background-color: #333;
+}
+
+.tone-feed-header {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    color: white;
+    width: 200px;
+    border: 25px;
+    height: 50px;
+    margin-bottom: 15px;
+    
+}
+
+.buttons {
+    float: right;
+    margin-right: 35px;
+    z-index: 2;
+}
+
+.buttons-two {
+    float: right;
+    margin-right: 35px;
+    z-index: 2;
+}
+
+.buttons > .login-button {
+    font-weight: normal;
+    color: white;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    background-color: #f50;
+    border-color: #f50;
+    border-radius: 3px;
+    height: 30px;
+    font-size: 14px;
+    /* float: right; */
+}
+
+.buttons > .signin-button {
+    color: white;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    background-color: transparent;
+    border-radius: 3px;
+    height: 30px;
+    font-size: 14px;
+    margin-right: 8px;
+    /* float: right; */
+}
+
+.buttons > .logout-button {
+    color: white;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    background-color: transparent;
+    border-radius: 3px;
+    height: 30px;
+    font-size: 14px;
+    margin-right: 8px;
+    /* float: right; */
+}
+
+.greeting-header {
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    color: white;
+    width: 200px;
+    border: 25px;
+    height: 50px;
+    margin-bottom: 15px;
+}

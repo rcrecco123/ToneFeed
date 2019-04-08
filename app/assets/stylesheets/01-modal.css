@@ -1,0 +1,94 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(241, 241, 241, 0.404);
+  z-index: 10;
+}
+
+.form-head {
+  text-align: center;
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+}
+
+.modal-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 450px;
+  height: 620px;
+}
+
+.modal-form {
+
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  width: 425px;
+  height: 280px;
+}
+
+.modal-form-two {
+
+  align-content: center;
+  align-self: center;
+  align-items: center;
+}
+
+.modal-form-two > label {
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  margin-left: 10px;
+}
+
+.modal-text-box {
+  border-radius: 3px;
+  height: 32px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  width: 420px;
+  z-index: 1;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.modal-text-box[type=text] {
+  /* padding: 12px 20px; */
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  font-size: 14px;
+}
+
+.modal-text-box[type=password] {
+  /* padding: 12px 20px; */
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  font-size: 14px;
+}
+
+
+
+.signup-button {
+  width: 425px;
+  height: 40px;
+  font-weight: normal;
+  color: white;
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  background-color: #f50;
+  border-color: #f50;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.note {
+  margin-left: 12px;
+  margin-top: 50px;
+  color: #999;
+  font: 12px/1.4 "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+}

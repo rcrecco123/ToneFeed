@@ -3,24 +3,20 @@ import {
     LOGOUT_CURRENT_USER,
 } from '../actions/session_actions';
 
-//setup default state for session
 
-const _nullSession = {
-    currentUser: null,
-};
-
-export default (state = _nullSession, action) => {
+export default (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            return Object.assign({}, { currentUser: action.user.id });
+            //interpolate a key with []
+            return Object.assign({}, { [action.user.id]: action.user});
         case LOGOUT_CURRENT_USER:
-            return _nullSession;
+            return {};
         default:
             return state;
             break;
     }
 };
 
-
-
+//we always want the key to be the ID and the value to be the information
+//that corresponds to the ID

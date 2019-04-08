@@ -9,8 +9,7 @@ export const LOGOUT_CURRENT_USER = "LOGOUT_CURENT_USER";
 
 //type + payload
 
-const receiveCurrentUser = ({ user }) => {
-    debugger
+const receiveCurrentUser = (user) => {
     return {
         type: RECEIVE_CURRENT_USER, //passed to recuder
         user,
