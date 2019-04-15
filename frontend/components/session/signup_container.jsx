@@ -14,6 +14,19 @@ import { withRouter } from 'react-router-dom';
 //     createNewUser: formUser => dispatch(createNewUser(formUser)),
 // })
 
+// const mapStateToProps = (state) => {
+//     return {
+//         error: state.login.error,
+//         errorMessage: state.login.errorMessage,
+//     };
+// };
+
+const mapStateToProps = (state) => {
+    return ({
+        errors: state.errors.session,
+    });
+};
+
 const mapDispatchToProps = dispatch => {
     return {
         createNewUser: formUser => dispatch(createNewUser(formUser)),
@@ -29,4 +42,4 @@ const mapDispatchToProps = dispatch => {
 
 //two invocations
 //createNewUser in props in signup.jsx (can call this.props.createNewUser(JSON OBJECT))
-export default withRouter(connect(null, mapDispatchToProps)(Signup));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Signup));

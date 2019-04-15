@@ -21,6 +21,8 @@ class Login extends React.Component {
 
     }
 
+
+
     //takes input type
     handleInput(type) {
         //arrow function that sets state
@@ -34,6 +36,7 @@ class Login extends React.Component {
     handle() {
         this.props.closeModal();
         this.props.history.push('/feed');
+        this.props.closeModal();
     }
 
     //takes in an event
@@ -47,6 +50,8 @@ class Login extends React.Component {
     }
     
     render() {
+
+
         return (
             <div className="session-form">
                 <h2 className='form-head'>Sign in</h2>
@@ -70,6 +75,9 @@ class Login extends React.Component {
                             onChange={this.handleInput('password')}
                         />
                     </label>
+                        <div className="login-errors">
+                            {this.props.errors}
+                        </div>
                         <button className="signup-button" 
                         onClick={this.handleSubmit}>Sign in</button>
                         <p className='note'>

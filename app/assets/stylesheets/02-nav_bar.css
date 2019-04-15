@@ -1,7 +1,7 @@
 .bar {
+    /* width: 100%; */
     width: 1240px;
     height: 70px;
-    position: relative;
     margin-left: -50px;
     color: white;
     background-color: #333;
@@ -17,17 +17,17 @@
     border: 25px;
     height: 50px;
     margin-bottom: 15px;
+    margin-left: 25px;
     
 }
 
 .buttons {
-    float: right;
     margin-right: 35px;
     z-index: 2;
 }
 
 .buttons-two {
-    float: right;
+    align-items: right;
     margin-right: 35px;
     z-index: 2;
 }
@@ -68,7 +68,6 @@
 
 .greeting-header {
     display: flex;
-    position: absolute;
     z-index: 1;
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
     color: white;

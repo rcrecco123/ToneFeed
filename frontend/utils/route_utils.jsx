@@ -12,21 +12,32 @@ const Auth = ({ loggedIn, path, component: Component }) => (
     <Route
         path={path}
         render={ props => (
-            loggedIn ? <Redirect to="/" /> :
+            loggedIn ? <Redirect to="/feed" /> :
             <Component {...props} />
         )}
     />
 );
+
+// const loggedInRoute = ({ loggedIn, path, component }) => (
+//     <Route
+//         path={path}
+//         render={ props => (
+//             loggedIn ? <Redirect to="/feed" /> :
+//             <Component {...props} />
+//         )}
+//     />
+// );
 
 const Protected = ({ loggedIn, path, component: Component}) => (
     <Route
         path={path}
         render={ props => (
             loggedIn ? <Component {...props} /> :
-            <Redirect to="/signup" />
+            <Redirect to="/" />
         )}
     />
 );
 
 export const AuthRoute = withRouter(connect(mapStateToProps)(Auth));
-export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected))
+// export const loggedInRoute = withRouter(connect(mapStateToProps)(loggedInRoute));
+export const ProtectedRoute = withRouter(connect(mapStateToProps)(Protected));
