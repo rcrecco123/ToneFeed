@@ -10,26 +10,27 @@ import { Link } from 'react-router-dom';
 const NavBar = ({ currentUser, logout, openModal, history }) => {
 
     function handleLogoutClick() {
-        {logout};
+        history.push('/')
+        {logout()};
         history.push('/')
     }
 
-    debugger
-    const loggedOutBar = () => (
-        <div className="main-div-splash">
-            <h2 className="tone-feed-header">ToneFeed</h2>
-            <nav className="bar">
-                <div className='buttons'>
-                    <button className="signin-button" onClick={() => openModal('login')}>
-                        Sign in
-                    </button>
-                    <button className="login-button" onClick={() => openModal('signup')}>
-                        Create account
-                    </button>
-                </div>
-            </nav>
-        </div>
-    );
+
+    // const loggedOutBar = () => (
+    //     <div className="main-div-splash">
+    //         <h2 className="tone-feed-header">ToneFeed</h2>
+    //         <nav className="bar">
+    //             <div className='buttons'>
+    //                 <button className="signin-button" onClick={() => openModal('login')}>
+    //                     Sign in
+    //                 </button>
+    //                 <button className="login-button" onClick={() => openModal('signup')}>
+    //                     Create account
+    //                 </button>
+    //             </div>
+    //         </nav>
+    //     </div>
+    // );
 
     const loggedInBar = () => (
         <hgroup className="bar">

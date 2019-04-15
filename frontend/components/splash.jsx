@@ -6,7 +6,14 @@ class Splash extends React.Component {
     constructor(props) {
         super(props)
 
-        // this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleDemo = this.handleDemo.bind(this)
+    };
+
+    handleDemo() {
+        this.props.demo({email: 'docdoom815@gmail.com', password:'funfunfun1'})
+            .then(data => {
+                this.props.history.push("/feed")
+            });
     };
 
     
@@ -20,6 +27,7 @@ class Splash extends React.Component {
                         <div className='buttons'>
                             <button className="signin-button" onClick={() => this.props.openModal('login')}>Sign in</button>
                             <button className="login-button" onClick={() => this.props.openModal('signup')}>Create account</button>
+                            <button className="demo-button" onClick={this.handleDemo}>Demo Login</button>
                         </div>
                     </header>
                     <ul className="main-slider-content">
@@ -38,6 +46,19 @@ class Splash extends React.Component {
                             <img src="https://a-v2.sndcdn.com/assets/images/home/hp_image-6155d6b.jpg" alt="image2"></img>
                         </li>
                     </ul>
+                </div>
+
+                <div className='splash-banner'>
+                    <img src='https://a-v2.sndcdn.com/assets/images/home/hp_creator_image-e08dee4.jpg'></img>
+                    <div className='banner-text'>
+                        <h2>Thanks for listening. Now join in.</h2>
+                        <p>Listen, upload, and share music with the world.</p>
+                        <button className="login-button" onClick={() => this.props.openModal('signup')}>Create account</button>
+                        <br/>
+                        <div className='inline-banner'>
+                            <p className='inline-banner-text'>Already have an account?</p> <button className="signin-button" onClick={() => this.props.openModal('login')}>Sign in</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

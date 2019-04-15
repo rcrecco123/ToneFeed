@@ -21,6 +21,24 @@ class Signup extends React.Component {
 
     }
 
+    renderErrors(type) {
+
+        let styles = {
+            listStyleType: 'none',
+        }
+
+        if (this.props.errors[type] !== undefined) {
+            let arr = type.split('_').join(' ');
+            return (
+                <ul style={styles}>
+                    <li className='signup-errors'>
+                        <i className="err"></i>
+                        {this.props.errors[type]}
+                    </li>
+                </ul>)
+        }
+    }
+
     //takes input type
     handleInput(type) {
         //arrow function that sets state
@@ -44,6 +62,7 @@ class Signup extends React.Component {
     }
 
     render () {
+
         return (
             <div className="session-form">
             <h2 className='form-head'>Sign Up</h2>
@@ -57,6 +76,9 @@ class Signup extends React.Component {
                                 value={this.state.username}
                                 onChange={this.handleInput('username')}
                             />
+                            <div className='errors-ul'>
+                                {this.renderErrors('username')}
+                            </div>
                         </label >
                         <label className='modal-label'>Email:
                             <input
@@ -66,6 +88,9 @@ class Signup extends React.Component {
                                 value={this.state.email}
                                 onChange={this.handleInput('email')}
                             />
+                            <div className='errors-ul'>
+                                {this.renderErrors('email')}
+                            </div>
                         </label>
                         <label className='modal-label'>Password:
                             <input 
@@ -75,7 +100,11 @@ class Signup extends React.Component {
                                 value={this.state.password}
                                 onChange={this.handleInput('password')}
                             />
+                            <div className='errors-ul'>
+                                {this.renderErrors('password')}
+                            </div>
                         </label>
+
                         <button
                             className="signup-button" 
                             onClick={this.handleSubmit}>Sign Up</button>
