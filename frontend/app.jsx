@@ -5,6 +5,7 @@ import SplashContainer from './components/splash_container';
 import Modal from './components/modal/modal';
 import NavBar from './components/nav_bar/nav_bar_container';
 import Footer from './components/footer/footer';
+import Feed from './components/feed/feed_container';
 import { AuthRoute,
         ProtectedRoute } from './utils/route_utils';
 import {
@@ -27,14 +28,10 @@ export default () => (
     <div>
         <Modal />
         <NavBar />
-       <Switch>
-                  
-            {/* <AuthRoute exact path='/signup' component={SignUpContainer} />
-            <Route path='/login' component={login_container} /> */}
-            
-            <ProtectedRoute path='/feed' />
-            <AuthRoute exact path='/' component={SplashContainer} />
-        </Switch>
+            <Switch>
+                <AuthRoute exact path='/' component={props => <SplashContainer {...props}/>} />
+                <ProtectedRoute path='/feed' component={Feed} />
+            </Switch>
         <Footer />
     </div>
 )
