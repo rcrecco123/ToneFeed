@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-
+import { withRouter } from 'react-router-dom';
 import { logout, login } from '../actions/session_actions';
 import { openModal } from '../actions/modal_actions';
 import splash from './splash';
@@ -14,7 +14,7 @@ const mapDispatchToProps = dispatch => ({
     demo: demoUser => dispatch(login(demoUser))
 });
 
-export default connect(
+export default withRouter(connect(
     mapStateToProps,
     mapDispatchToProps
-)(splash);
+)(splash));

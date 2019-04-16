@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 
 //component must be wrapped in HashRouter by wrapping connect in withRouter
@@ -10,33 +10,15 @@ import { Link } from 'react-router-dom';
 const NavBar = ({ currentUser, logout, openModal, history }) => {
 
     function handleLogoutClick() {
-        history.push('/')
-        {logout()};
+        logout();
         history.push('/')
     }
-
-
-    // const loggedOutBar = () => (
-    //     <div className="main-div-splash">
-    //         <h2 className="tone-feed-header">ToneFeed</h2>
-    //         <nav className="bar">
-    //             <div className='buttons'>
-    //                 <button className="signin-button" onClick={() => openModal('login')}>
-    //                     Sign in
-    //                 </button>
-    //                 <button className="login-button" onClick={() => openModal('signup')}>
-    //                     Create account
-    //                 </button>
-    //             </div>
-    //         </nav>
-    //     </div>
-    // );
 
     const loggedInBar = () => (
         <hgroup className="bar">
             <h2 className="tone-feed-header">ToneFeed</h2>
             <div className='buttons-two'>
-                <button className="logout-button" onClick={handleLogoutClick}>Sign out</button>
+                <button className="logout-button" onClick={handleLogoutClick}>Sign Out</ button>
                 <h2 className="greeting-header">Hello, {currentUser.username}</h2>
             </div>
         </hgroup>
@@ -46,4 +28,4 @@ const NavBar = ({ currentUser, logout, openModal, history }) => {
 
 };
 
-export default NavBar;
+export default withRouter(NavBar);

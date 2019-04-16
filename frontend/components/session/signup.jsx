@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 //FORM COMPONENT
 
@@ -52,13 +53,16 @@ class Signup extends React.Component {
     
     push() {
         this.props.history.push('/feed');
+        this.props.closeModal();
     }
 
     handleSubmit(e) {
+        debugger
         //prevents default 'POST'
         e.preventDefault();
         this.props.createNewUser(this.state)
-            .then(this.push);
+            .then(this.push());
+        debugger
     }
 
     render () {
@@ -120,4 +124,4 @@ We may use information you provide us in order to show you targeted ads as descr
     }
 };
 
-export default Signup;
+export default withRouter(Signup);

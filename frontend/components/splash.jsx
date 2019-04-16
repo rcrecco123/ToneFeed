@@ -16,6 +16,14 @@ class Splash extends React.Component {
             });
     };
 
+    componentWillReceiveProps(props) {
+        render();
+    };
+
+    componentDidUpdate() {
+        render();
+    }
+
     
     render() {
 

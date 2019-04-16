@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 //FORM COMPONENT
 
@@ -35,8 +36,8 @@ class Login extends React.Component {
 
     handle() {
         this.props.closeModal();
-        this.props.history.push('/feed');
-        this.props.closeModal();
+        // this.props.history.push('/feed');
+        this.props.closeModal;
     }
 
     //takes in an event
@@ -44,14 +45,17 @@ class Login extends React.Component {
         //prevents default 'POST'
         e.preventDefault();
         this.props.processForm(this.state)
-            .then(this.handle);
+            .then(this.handle());
+
+        //modal was not closing because I did not invoke the handle() function in the .then argument.
+
         //push NOT invoked becuase we want it as a callback (returned function)
         //anything passed to .then is not going to be invoked, meaning it is going to be a callback.
     }
     
     render() {
 
-
+        
         return (
             <div className="session-form">
                 <h2 className='form-head'>Sign in</h2>
@@ -92,4 +96,4 @@ We may use information you provide us in order to show you targeted ads as descr
     }
 };
 
-export default Login;
+export default withRouter(Login);
