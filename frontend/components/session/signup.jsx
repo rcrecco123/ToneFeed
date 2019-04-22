@@ -36,7 +36,8 @@ class Signup extends React.Component {
                         <i className="err"></i>
                         {this.props.errors[type]}
                     </li>
-                </ul>)
+                </ul>
+            )
         }
     }
 

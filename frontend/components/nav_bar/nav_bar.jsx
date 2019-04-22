@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 
+
 //component must be wrapped in HashRouter by wrapping connect in withRouter
 //in order for this components props to have access to history
 
@@ -14,12 +15,19 @@ const NavBar = ({ currentUser, logout, openModal, history }) => {
         history.push('/')
     }
 
+    function handleUploadClick() {
+        history.push('/upload')
+    }
+
     const loggedInBar = () => (
         <hgroup className="bar">
             <h2 className="tone-feed-header">ToneFeed</h2>
             <div className='buttons-two'>
                 <button className="logout-button" onClick={handleLogoutClick}>Sign Out</ button>
-                <h2 className="greeting-header">Hello, {currentUser.username}</h2>
+                <button className="upload-button" onClick={handleUploadClick}>Upload</button>
+                <ul className='ul'>
+                    <li className="a">Hello, {currentUser.username}</li>
+                </ul>
             </div>
         </hgroup>
     );

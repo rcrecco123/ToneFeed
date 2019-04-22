@@ -18,7 +18,6 @@ export default (state = _nullSession, action) => {
             return _nullSession;
         default:
             return state;
-            break;
     }
 };
 

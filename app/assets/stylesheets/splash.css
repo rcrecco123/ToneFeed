@@ -46,7 +46,9 @@ header {
     border-radius: 3px;
     height: 30px;
     font-size: 14px;
+    cursor: pointer;
 }
+
 
 .buttons > .signin-button {
     color: white;
@@ -56,6 +58,7 @@ header {
     height: 30px;
     font-size: 14px;
     margin-right: 8px;
+    cursor: pointer;
 }
 
 .buttons > .demo-button {
@@ -68,6 +71,7 @@ header {
     height: 30px;
     font-size: 14px;
     margin-left: 8px;
+    cursor: pointer;
 }
 
 body {
@@ -94,10 +98,10 @@ body {
 .main-slider-content {
     list-style: none;
     display: flex;
-    animation-duration: 12s;
+    /* animation-duration: 12s;
     animation-name: slide;
     animation-iteration-count: infinite;
-    transform: translateX(-1240px);
+    transform: translateX(-1240px); */
 }
 
 @keyframes slide {
@@ -110,7 +114,7 @@ body {
     50%{
         transform: translateX(0);
     }
-    75%{
+    /* 75%{
         transform: translateX(-1240px);
     }
     90%{
@@ -118,6 +122,9 @@ body {
     }
     98%{
         transform: translateX(-1240px);
+    } */
+    100%{
+        text-replace: translateX(0);
     }
 
 }
@@ -266,4 +273,8 @@ body {
     font-size: 10px;
     margin-left: 12px;
     margin-bottom: 7px;
+}
+
+.bottom-button{
+    cursor: pointer;
 }

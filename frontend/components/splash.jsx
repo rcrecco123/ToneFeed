@@ -12,7 +12,7 @@ class Splash extends React.Component {
     handleDemo() {
         this.props.demo({email: 'docdoom815@gmail.com', password:'funfunfun1'})
             .then(data => {
-                this.props.history.push("/feed")
+                this.props.history.push("/users/35")
             });
     };
 
@@ -61,10 +61,10 @@ class Splash extends React.Component {
                     <div className='banner-text'>
                         <h2>Thanks for listening. Now join in.</h2>
                         <p>Listen, upload, and share music with the world.</p>
-                        <button className="login-button" onClick={() => this.props.openModal('signup')}>Create account</button>
+                        <button className="login-button bottom-button" onClick={() => this.props.openModal('signup')}>Create account</button>
                         <br/>
                         <div className='inline-banner'>
-                            <p className='inline-banner-text'>Already have an account?</p> <button className="signin-button" onClick={() => this.props.openModal('login')}>Sign in</button>
+                            <p className='inline-banner-text'>Already have an account?</p> <button className="signin-button bottom-button" onClick={() => this.props.openModal('login')}>Sign in</button>
                         </div>
                     </div>
                 </div>

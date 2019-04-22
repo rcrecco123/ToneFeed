@@ -4,6 +4,5 @@ import merge from 'lodash/merge';
 import modal from '../reducers/modal';
 
 export default combineReducers({
-    // filters,
-    modal
+    modal,
 });

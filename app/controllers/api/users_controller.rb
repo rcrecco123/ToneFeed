@@ -8,7 +8,7 @@ class Api::UsersController < ApplicationController
 
         if @user.save
             login(@user)
-            render 'api/users/show'
+            render '/api/users/show'
             #THE USERS SHOW PAGE WILL BE MY FEED
         else
             render json: @user.errors, status: 501
