@@ -10,7 +10,9 @@ class TracksIndex extends React.Component {
     constructor(props) {
         super(props);
 //think of state as data that will change over time!
+debugger
         this.state = {
+            
         }
     }
 
@@ -25,11 +27,13 @@ class TracksIndex extends React.Component {
     render() {
         
         let tracks = Object.values(this.props.tracks);
-        tracks = tracks.filter(track => track["user_id"] == this.props.currentUser)
-        let trackLis = tracks.map( track => {
+        debugger
+        let tracksResult = tracks.filter((track) => track['user_id'] === this.props.currentUser);
+        debugger
+        let trackLis = tracksResult.map( track => {
             return (
                 <div>
-                    <li>{track.id}</li>
+                    <li>{track.user_id}</li>
                     <li>{track.title}</li>
                 </div>
             );
@@ -55,7 +59,7 @@ class TracksIndex extends React.Component {
         const mapStateToProps = (state) => {
             return {
                 tracks: state.entities.tracks,
-                // currentUser: state.entities.users[state.session.id]
+                currentUser: state.session.currentUser
             }
         };
         

@@ -1,0 +1,83 @@
+
+
+.upload-form {
+    margin-left: -100px;
+    width: 1240px;
+    height: 70px;
+    
+    /* margin-top: 400px; */
+}
+
+.upload-form-div {
+    
+}
+
+.track-title {
+    padding-top: 100px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    margin-left: 567px;
+}
+
+.click-to-upload {
+    margin-top: 100px;
+    text-align: center;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+}
+
+.custom-file-upload {
+    margin-top: 50px;
+    cursor: pointer;
+    display: flex; 
+    align-self: center;
+    height: 50px;
+    width: 275px;
+    background-color: #f50;
+    color: white;
+    
+    text-align: center;
+    vertical-align: middle;
+    line-height: 48px;   
+    text-indent: 50px;
+    
+    border: 5px;
+    font-weight: normal;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    background-color: #f50;
+    border-color: #f50;
+    border-radius: 3px;
+    font-size: 20px;
+    margin-left: 545px;
+    /* margin: auto; */
+    font-weight: 100;
+}
+
+.fa-cloud-upload {
+    color: white;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.sub-button {
+
+    border: 5px;
+    font-weight: normal;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    background-color: #f50;
+    color: white;
+    border-color: #f50;
+    border-radius: 3px;
+    font-size: 20px;
+    margin-left: 640px;
+    /* margin: auto; */
+    font-weight: 100;
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 35px;
+    cursor: pointer;
+
+}

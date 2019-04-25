@@ -1,12 +1,11 @@
-import { connect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import { connect } from "react-redux";
 import Upload from './upload';
 
-mapStateToProps = state => {
+const mapStateToProps = (state) => {
+    return {
+        currentUser: state.session.currentUser
+    };
+};
 
-}
-
-mapDispatchToProps = dispatch => {
-
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Upload);
+export default withRouter(connect(mapStateToProps, null)(Upload));

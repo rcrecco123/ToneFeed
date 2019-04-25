@@ -1,43 +1,65 @@
-.bar {
+/* .bar { */
     /* width: 100%; */
-    width: 1240px;
+    /* width: 1240px;
     height: 70px;
     margin-left: -50px;
     color: white;
     background-color: #333;
-}
+    margin-bottom: 50px; */
+/* } */
 
-.tone-feed-header {
+/* .tone-feed-header {
     display: flex;
     position: absolute;
-    z-index: 1;
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
     color: white;
     width: 200px;
     border: 25px;
     height: 50px;
-    margin-bottom: 15px;
+    margin-bottom: 19px;
     margin-left: 25px;
 
+} */
+
+/* .sub-button {
+  margin-left: 250px;
+  display: flex;
+}
+
+.logout-button-nav {
+  float: right;
+  margin-bottom: 25px;
+  display: inline-flex;
+}
+
+.upload-button-nav {
+  float: right;
 }
 
 .buttons-two {
-
+  width: 1000px;
+  height: 1000px;
+  margin-bottom: 100px;
 }
+
 
 .logout-button {
     cursor: pointer;
 }
 
+.upload-button {
+    cursor: pointer; 
+}
+
 ul {
+  padding-top: 15px;
+  margin-top: 15px;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+  align-content: flex-end;
 }
 
 li {
-  float: left;
+  float: right;
 }
 
 li a {
@@ -46,9 +68,11 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
+  margin-right: 100px;
+
+} */
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+/* li a:hover {
   background-color: #111;
-}
+} */
