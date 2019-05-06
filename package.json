@@ -36,7 +36,9 @@
     "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
-    "webpack": "^4.20.2",
+    "waveplayer": "^1.2.1",
+    "wavesurfer.js": "^2.0.0-beta01",
+    "webpack": "^4.30.0",
     "webpack-cli": "^3.1.2"
   }
 }

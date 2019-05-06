@@ -1,9 +1,4 @@
-<h1><%= @track.title %></h1>
-
-Test 1
-<br>
-<audio src='<%= url_for(@track.track) %>' type="audio/mpeg" controls></audio>
-<br>
-Test 2
-<br>
-<audio src='https://s3.amazonaws.com/tonefeed-dev/yzdcaRHshydpm9Zhtgo7Hxt4' type="audio/mpeg" controls></audio>
+json.set! @track.id do 
+    json.extract! @track, :id, :title, :user_id
+    json.fileUrl url_for(@track.track)
+end

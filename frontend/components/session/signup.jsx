@@ -58,12 +58,12 @@ class Signup extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
+        
         //prevents default 'POST'
         e.preventDefault();
         this.props.createNewUser(this.state)
             .then(this.push());
-        debugger
+        
     }
 
     render () {

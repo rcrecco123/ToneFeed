@@ -7,7 +7,9 @@ import NavBar from './components/nav_bar/nav_bar_container';
 import Footer from './components/footer/footer';
 import Feed from './components/feed/feed_container';
 import TracksIndex from './components/track/track_index';
+import TrackShow from './components/track/track_show_container';
 import UploadContainer from './components/upload/upload_container';
+import UserShowContainer from './components/user/user_show_container';
 import { AuthRoute,
         ProtectedRoute } from './utils/route_utils';
 import {
@@ -32,9 +34,12 @@ export default () => (
         <NavBar />
             <Switch>
                 <AuthRoute exact path='/' component={props => <SplashContainer {...props}/>} />
-            <ProtectedRoute exact path='/users/:userId' component={TracksIndex} />   
-            <ProtectedRoute path='/feed' component={TracksIndex} />
-            <ProtectedRoute path='/upload' component={UploadContainer} />
+                <ProtectedRoute exact path='/users/:userId' component={TracksIndex} />  
+                <ProtectedRoute path='/users/:userId' component={UserShowContainer} />
+                <ProtectedRoute path='/feed' component={TracksIndex} />
+                <ProtectedRoute path='/feed' component={UserShowContainer} />
+                <Route exact path='/tracks/:id' component={TrackShow} />
+                <ProtectedRoute path='/upload' component={UploadContainer} />
             </Switch>
         <Footer />
     </div>

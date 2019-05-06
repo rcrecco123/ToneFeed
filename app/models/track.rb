@@ -18,5 +18,5 @@ class Track < ApplicationRecord
         # class_name: :User
 
     has_one_attached :track
-
+    has_one_attached :image
 end

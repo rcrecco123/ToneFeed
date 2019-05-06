@@ -8,6 +8,8 @@ import { withRouter } from 'react-router-dom';
 
 //the arguments being passed to NavBar are props of this component.
 
+//WRITE THE "CONDITIONAL" UPLOAD PARTS IN A SEPERATE CONTAINER
+
 const NavBar = ({ currentUser, logout, openModal, history }) => {
 
     function handleLogoutClick() {
@@ -20,15 +22,15 @@ const NavBar = ({ currentUser, logout, openModal, history }) => {
     }
 
     function handleUsernameButton() {
-        history.push("/users/" + currentUser.id.toString())
+        history.push("/users/" + currentUser.id.toString());
     }
 
     const loggedInBar = () => (
         <nav className="topnav">
             <h2 className="tone-feed-header">ToneFeed</h2>
             <div className='buttons-two'>
-                <button className="a" onClick={handleUsernameButton}>{currentUser.username}</button>
                 <button className="logout-button-nav" onClick={handleLogoutClick}>Sign Out</ button>
+                <button className="a" onClick={handleUsernameButton}>{currentUser.username}</button>
                 <button className="upload-button-nav" onClick={handleUploadClick}>Upload</button>
             </div>
         </nav>

@@ -2,7 +2,7 @@ class Api::TracksController < ApplicationController
     
     def create
         @track = Track.new(track_params)
-        debugger
+        
         if @track.save
             render json: {message: "File successfully uploaded"}
         else
@@ -12,15 +12,16 @@ class Api::TracksController < ApplicationController
     
     def show
         @track = Track.find(params[:id])
+        render "api/tracks/show"
     end
 
     def index
         @tracks = Track.all
-        render :index
+        render "api/tracks/index"
     end
 
 
     def track_params
-        params.require(:track).permit(:title, :track, :user_id)
+        params.require(:track).permit(:id, :title, :track, :user_id, :image)
     end
 end

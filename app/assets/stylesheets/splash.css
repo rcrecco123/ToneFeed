@@ -3,7 +3,7 @@ html {
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    margin-top: -50px;
+    margin-top: -70px;
 }
 body, header, ul, li, div, img {
     margin: 0;
@@ -188,7 +188,7 @@ body {
    width: 100%;
    color: darkgrey;
    text-align: center;
-   margin-top: 150px;
+   margin-top: 250px;
 }
 
 

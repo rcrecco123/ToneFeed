@@ -23,6 +23,8 @@ class User < ApplicationRecord
 
     has_many :tracks
 
+    has_one_attached :image
+
     def password=(password)
         @password = password
         self.password_digest = BCrypt::Password.create(password)

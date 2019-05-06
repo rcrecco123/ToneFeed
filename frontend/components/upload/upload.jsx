@@ -5,11 +5,13 @@ class Upload extends React.Component {
 
     constructor(props) {
         super(props);
-        debugger
+        
         console.log(props.currentUser);
         this.state = {
             track: null,
             trackUrl: null,
+            image: null,
+            imageUrl: null,
             title: "",
         }
 
@@ -24,9 +26,9 @@ class Upload extends React.Component {
             this.setState({ [type]: e.target.value })
         };
     };
-    
+
     handleFile(e) {
-        debugger
+        
         const file = e.currentTarget.files[0];
         const fileReader = new FileReader();
         fileReader.onloadend = () => {
@@ -37,13 +39,29 @@ class Upload extends React.Component {
         }
     }
 
+    handleFileImg(e) {
+        
+        const fileTwo = e.currentTarget.files[0];
+        const fileReaderTwo = new FileReader();
+        fileReaderTwo.onloadend = () => {
+            this.setState({ image: fileTwo, imageUrl: fileReaderTwo.result })
+        }
+        if (fileTwo) {
+            fileReaderTwo.readAsDataURL(fileTwo);
+        }
+    }
+
     handleSubmit(e) {
+
         e.preventDefault();
         const formData = new FormData();
+        
         formData.append('track[title]', this.state.title);
-        formData.append('track[file]', this.state.trackFile);
-        debugger
+        formData.append('track[track]', this.state.track);
+        formData.append('track[image]', this.state.image);
         formData.append('track[user_id]', this.props.currentUser);
+        
+
         $.ajax({
             url: "/api/tracks",
             method: "POST",
@@ -52,10 +70,13 @@ class Upload extends React.Component {
             processData: false,
         }).then((response => console.log(response.message)),
                  response => console.log(response.JSON))
+                 .then((console.log()))
+        this.props.history.push(`/tracks/${this.state.track.id}`)
     }
 
     render() {
         console.log(this.state);
+        
         return (
         <div className="upload-form-div">
             <div >
@@ -63,10 +84,17 @@ class Upload extends React.Component {
             </div>
 
             <form className="upload-form" onSubmit={this.handleSubmit.bind(this)}>
+                    
                     <label className="custom-file-upload">
                         <input type="file" onChange={this.handleFile.bind(this)} />
-                        <i className="fa fa-cloud-upload"></i> Choose a file to upload
+                        <i className="fa fa-cloud-upload"></i> Choose a track to upload
                     </label>
+
+                    <label className="custom-file-upload">
+                        <input type="file" onChange={this.handleFileImg.bind(this)} />
+                        <i className="fa fa-cloud-upload"></i> Choose an image to upload
+                    </label>
+
                     <br/>
                     <br/>
                     <br/>
