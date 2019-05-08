@@ -11,7 +11,6 @@ export default (oldState = {}, action) => {
             debugger
             return Object.assign({}, oldState, action.track);
         default:
-     
             return oldState;
     }
 };

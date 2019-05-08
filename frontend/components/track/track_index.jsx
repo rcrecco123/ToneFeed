@@ -8,6 +8,7 @@ import WaveSurfer from 'wavesurfer.js';
 
 
 
+
 class TracksIndex extends React.Component {
 
     constructor(props) {
@@ -15,6 +16,7 @@ class TracksIndex extends React.Component {
 //think of state as data that will change over time!
         
         this.state = {
+
         }
         this.handleWave = this.handleWave.bind(this);
     }
@@ -45,8 +47,8 @@ class TracksIndex extends React.Component {
         let tracks = Object.values(this.props.tracks);
         
         let tracksResult = tracks.filter((track) => track['user_id'] === this.props.currentUser);
+        debugger
         let trackLis = tracksResult.map( track => {
-            
 
 
             return (
@@ -61,14 +63,10 @@ class TracksIndex extends React.Component {
                     <div className="track-info">
                         <div className="inner-info">
                             <div><h2>{track.username}</h2></div>
-                            <div><h3>{track.title}</h3></div>
+                            <div><h3 className="link-to-show" onClick={() => { this.props.history.push("/tracks/32") }}>{track.title}</h3></div>
                         </div>
                         <audio controls src={track.fileUrl}></audio>
-                        {/* <div>{wavesurfer.load(track.fileUrl)}</div> */}
                     </div>
-
-
-                    <div id='waveform'>{() => this.handleWave(track)}</div>
 
                 </li>
             );

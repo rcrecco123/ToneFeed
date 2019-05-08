@@ -1,0 +1,34 @@
+html {
+    margin-left:auto;
+    margin-right:auto;
+
+    padding-right: 180px;
+    margin-right: 180px;
+
+    overflow: auto;
+
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    margin-left: -125px;
+    margin-top:-25px;
+
+}
+.root {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    margin-left: -125px;
+    margin-top:-25px;
+}
+
+/* .root {
+    margin-left:15px;
+    margin-right:auto;
+} */

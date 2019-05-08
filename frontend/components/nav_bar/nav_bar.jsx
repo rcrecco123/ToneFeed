@@ -3,6 +3,8 @@ import { withRouter } from 'react-router-dom';
 
 
 
+
+
 //component must be wrapped in HashRouter by wrapping connect in withRouter
 //in order for this components props to have access to history
 
@@ -22,18 +24,21 @@ const NavBar = ({ currentUser, logout, openModal, history }) => {
     }
 
     function handleUsernameButton() {
-        history.push("/users/" + currentUser.id.toString());
+        // history.push("/users/" + currentUser.id.toString());
+        history.push("/feed");
     }
 
     const loggedInBar = () => (
-        <nav className="topnav">
-            <h2 className="tone-feed-header">ToneFeed</h2>
-            <div className='buttons-two'>
-                <button className="logout-button-nav" onClick={handleLogoutClick}>Sign Out</ button>
-                <button className="a" onClick={handleUsernameButton}>{currentUser.username}</button>
-                <button className="upload-button-nav" onClick={handleUploadClick}>Upload</button>
-            </div>
-        </nav>
+        <div className="topnav">
+            <nav className="topnav">
+                <h2 className="tone-feed-header">ToneFeed</h2>
+                <div className='buttons-two'>
+                    <button className="logout-button-nav" onClick={handleLogoutClick}>Sign Out</ button>
+                    <button className="a" onClick={handleUsernameButton}>{currentUser.username}</button>
+                    <button className="upload-button-nav" onClick={handleUploadClick}>Upload</button>
+                </div>
+            </nav>
+        </div>
     );
 
     return currentUser ? loggedInBar() : null;

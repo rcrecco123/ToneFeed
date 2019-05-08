@@ -19,4 +19,6 @@ class Track < ApplicationRecord
 
     has_one_attached :track
     has_one_attached :image
+
+    has_many :comments
 end

@@ -10,6 +10,8 @@
     <%= javascript_include_tag 'application' %>
 
     <% if current_user %>
+    <%# //this "bootstraps" window.currentUser to the window/console %>
+    <%# //code can access window.currentUser, then gets deleted %>
       <script>
         window.currentUser = {
           "id": <%= current_user.id %>,
@@ -21,7 +23,8 @@
     <%# //libraries in the header %>
   </head>
 
-  <body>
+  <body class="root">
+    <div class="navbar-background"></div>
     <% @current_user %>
     <%= yield %>
   </body>
