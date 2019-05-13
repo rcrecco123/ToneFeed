@@ -17,6 +17,9 @@ class TrackShow extends React.Component {
         
     }
 
+        // calling 'fetchTrack(id) retrieves the track 
+        // and puts it into state under
+        // state.entities.tracks via reducer.
     componentDidMount() {
         this.props.fetchTrack(this.props.match.params.id);
         debugger
@@ -31,7 +34,7 @@ class TrackShow extends React.Component {
             hideScrollbar: true,
             cursorColor: 'transparent'
         })
-        })
+        }) 
     } 
 
     toggleClass() {

@@ -8,17 +8,25 @@ class Comments extends React.Component {
         super(props)
 
         this.state = {
-
+            flip: true
         }
     }
 
 
+    componentDidMount() {
+        this.props.fetchComments(this.props.match.params.id);
+    }
+
+    
+
     render() {
+
+        debugger
         return (
-            <div>
+            <div className="comment-main">
                 Hello!
-                <NewCommentForm />
-                <CommentList />
+                <NewCommentForm track={this.props.track} currentUser={this.props.currentUser}/>
+                <CommentList comments={this.props.comments} track={this.props.track} />
             </div>
         )
     }

@@ -21,6 +21,7 @@ class TracksIndex extends React.Component {
         this.handleWave = this.handleWave.bind(this);
     }
 
+    //put data into state for component
     componentDidMount() {
         
         this.props.fetchTracks();
