@@ -9,8 +9,8 @@ class TrackShow extends React.Component {
         this.state = {
             track: {},
             tracks: [],
-            on: 0,
-            playing: false
+            playing: false,
+            ws: null
         }
         debugger
         this.playClick = this.playClick.bind(this);
@@ -23,7 +23,6 @@ class TrackShow extends React.Component {
     componentDidMount() {
         this.props.fetchTrack(this.props.match.params.id);
         debugger
-        this.setState({on: 1})
 
         this.setState({ ws: WaveSurfer.create({
             container: '#waveform',
@@ -55,7 +54,8 @@ class TrackShow extends React.Component {
         //handles this.props.track on first render (track = null if track === undefined)
         if (this.props.track) {
             var track = Object.values(this.props.track);
-            var trackUser = this.props.track.user.username;
+            debugger
+            var trackUser = this.props.track.username;
             var trackTitle = this.props.track.title;
             var trackFileUrl = this.props.track.fileUrl;
             var trackImg = this.props.track.imageUrl
@@ -67,7 +67,9 @@ class TrackShow extends React.Component {
             var trackImg = null;
         }
 
-        trackFileUrl ? this.state.ws.load(trackFileUrl) : null;
+        if (this.state.ws) {
+            this.state.ws.load(trackFileUrl)
+        };
         
         debugger
         return (
@@ -105,5 +107,12 @@ class TrackShow extends React.Component {
     }
 
 }
+
+//LOOK INTO THIS METHOD!!!!!!!
+//Gives a component default props 
+
+// TrackShow.defaultProps = {
+//     trackName: "ronnie track 1"
+// }
 
 export default TrackShow;

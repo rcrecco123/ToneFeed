@@ -26,7 +26,7 @@ class Comments extends React.Component {
             <div className="comment-main">
                 Hello!
                 <NewCommentForm track={this.props.track} currentUser={this.props.currentUser}/>
-                <CommentList comments={this.props.comments} track={this.props.track} />
+                <CommentList currentUser={this.props.user.username} comments={this.props.comments} track={this.props.track} />
             </div>
         )
     }

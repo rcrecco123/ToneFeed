@@ -1,0 +1,42 @@
+.header-comment-list-avatar {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    margin: none;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+}
+
+.user-avatar-list {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.comments-list-final {
+    display: flex;
+    margin: none;
+}
+
+.actual-comments-list {
+    margin-left: 35px;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+}
+
+.comment-list-item-box {
+    display: flex;
+    padding: 8px;
+    margin: none;
+}
+.comment-list-item-box > img {
+    width: 45px;
+    height: 45px;
+    padding: 9px;
+    margin: none;
+    margin-top: 12px;
+    
+}
+
+.comment-list-item-box-p {
+    padding: 0px;
+    margin: none;
+}

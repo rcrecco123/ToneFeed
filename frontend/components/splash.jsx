@@ -55,7 +55,32 @@ class Splash extends React.Component {
                         </li>
                     </ul>
                 </div>
+                <div className="splash-thumbnails">
+                    <div>
 
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
                 <div className='splash-banner'>
                     <img src='https://a-v2.sndcdn.com/assets/images/home/hp_creator_image-e08dee4.jpg'></img>
                     <div className='banner-text'>

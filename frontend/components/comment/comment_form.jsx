@@ -46,11 +46,12 @@ class CommentForm extends React.Component {
         debugger
         return (
             <div className="comment-form-main">
-                <div>user avatar</div>
-                <form action="" onSubmit={this.handleSubmit.bind(this)}>
-                        <input className="comment-input" onChange={this.handleInput("body")} type="text" value={this.state.body}/>
-                  
-                    <input type="submit" value="Submit" onChange={this.handleSubmit.bind(this)} />
+                <div className="comment-user-avatar">
+                    <img className="user-avatar" src="https://image.flaticon.com/icons/svg/149/149071.svg" />
+                </div>
+                <form className="form-comment" action="" onSubmit={this.handleSubmit.bind(this)}>
+                    <input className="submit-input" placeholder="Write a comment" className="comment-input" onChange={this.handleInput("body")} type="text" value={this.state.body}/>
+                    <input className="submit-button" type="submit" value="Submit" onChange={this.handleSubmit.bind(this)} />
                 </form>
             </div>
         )

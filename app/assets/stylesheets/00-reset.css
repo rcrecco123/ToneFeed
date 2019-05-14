@@ -15,6 +15,7 @@ html {
     vertical-align: baseline;
     margin-left: -125px;
     margin-top:-25px;
+    cursor: pointer;
 
 }
 .root {
@@ -26,6 +27,7 @@ html {
     vertical-align: baseline;
     margin-left: -125px;
     margin-top:-25px;
+    cursor: pointer;
 }
 
 /* .root {

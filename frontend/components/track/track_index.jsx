@@ -3,6 +3,7 @@ import { fetchTracks } from "../../actions/tracks_actions";
 import { connect } from 'react-redux';
 import UserShow from '../user/user_show_container';
 import WaveSurfer from 'wavesurfer.js';
+import { withRouter } from 'react-router-dom';
 
 
 
@@ -28,16 +29,15 @@ class TracksIndex extends React.Component {
     }
 
     handleWave(track) {
-        
+
         let wavesurfer = WaveSurfer.create({
             container: '#waveform',
             waveColor: 'violet',
             progressColor: 'purple'
-        })
+        });
 
         wavesurfer.load(track.fileUrl);
-        
-        
+
     }
 
     // rerenders page is specific piecees of data come back
@@ -64,7 +64,7 @@ class TracksIndex extends React.Component {
                     <div className="track-info">
                         <div className="inner-info">
                             <div><h2>{track.username}</h2></div>
-                            <div><h3 className="link-to-show" onClick={() => { this.props.history.push("/tracks/32") }}>{track.title}</h3></div>
+                            <div><h3 className="link-to-show" onClick={() => { this.props.history.push(`/tracks/${track.id}`) }}>{track.title}</h3></div>
                         </div>
                         <audio controls src={track.fileUrl}></audio>
                     </div>
@@ -115,4 +115,4 @@ class TracksIndex extends React.Component {
             }
         };
 
-export default connect(mapStateToProps, mapDispatchToProps)(TracksIndex);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(TracksIndex));

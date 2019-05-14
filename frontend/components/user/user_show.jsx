@@ -18,8 +18,14 @@ class UserShow extends React.Component {
         debugger
         return (
             <div className="user-show-banner">
+                
+                <div className="user-profile-image">
+                    <img className="user-avatar" src="https://image.flaticon.com/icons/svg/149/149071.svg"/>
+                </div>
 
-                <h2>{this.props.userModel[currentUserId].username}</h2>
+                <div className="info-box-feed">
+                    <h2 className="username-feed">{this.props.userModel[currentUserId].username}</h2>
+                </div>
 
             </div>
         )
