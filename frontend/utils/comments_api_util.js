@@ -12,3 +12,14 @@ export const destroyComment = (id) => {
         url: `/api/comments/${id}`
     })
 };
+
+export const createComment = (comment) => {
+    debugger
+    return $.ajax({
+        method: 'POST',
+        url: '/api/comments',
+        comment
+    })
+}
+
+

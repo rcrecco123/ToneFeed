@@ -3,7 +3,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 
-import App from '../../frontend/app';
+import App from '../../frontend/components/app';
 
 //Provider wraps whole app,
 //access to store through provider

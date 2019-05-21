@@ -61,6 +61,7 @@ class Upload extends React.Component {
         formData.append('track[image]', this.state.image);
         formData.append('track[user_id]', this.props.currentUser);
         
+        
 
         $.ajax({
             url: "/api/tracks",
@@ -71,7 +72,7 @@ class Upload extends React.Component {
         }).then((response => console.log(response.message)),
                  response => console.log(response.JSON))
                  .then((console.log()))
-        this.props.history.push(`/tracks/${this.state.track.id}`)
+        if (formData) this.props.history.push(`/feed`);
     }
 
     render() {
@@ -80,8 +81,9 @@ class Upload extends React.Component {
         return (
         <div className="upload-form-div">
             <div className="overflow-upload"></div>
+            
             <div >
-                    <h2 className="click-to-upload">Click to start uploading tones</h2>
+                <h2 className="click-to-upload">Click to start uploading tones</h2>
             </div>
 
             <form className="upload-form" onSubmit={this.handleSubmit.bind(this)}>

@@ -278,3 +278,17 @@ body {
 .bottom-button{
     cursor: pointer;
 }
+
+
+.splash-thunmnails-one {
+    display: grid;
+    grid-gap: 50px 100px;
+}
+
+.pokemon-pic {
+    height: 180px;
+    width: 180px;
+    border: 1px solid;
+    border-color: rgb(192, 192, 192);
+    margin: 20px;
+}

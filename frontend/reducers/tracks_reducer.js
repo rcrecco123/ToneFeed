@@ -8,7 +8,7 @@ export default (oldState = {}, action) => {
         case (RECEIVE_TRACKS):
             return Object.assign({}, oldState, action.tracks);
         case (RECEIVE_TRACK):
-            debugger
+            
             return Object.assign({}, oldState, action.track);
         default:
             return oldState;

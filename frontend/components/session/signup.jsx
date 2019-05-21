@@ -61,9 +61,8 @@ class Signup extends React.Component {
         
         //prevents default 'POST'
         e.preventDefault();
-        this.props.createNewUser(this.state)
-            .then(this.push());
-        
+            this.props.createNewUser(this.state)
+                .then(this.props.closeModal());
     }
 
     render () {

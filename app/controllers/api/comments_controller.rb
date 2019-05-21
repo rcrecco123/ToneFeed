@@ -8,7 +8,7 @@ class Api::CommentsController < ApplicationController
         if @comment.save
             render json: {message: "Comment saved!"}
         else
-            render json: @track.errors.full_messages
+            render json: @comment.errors.full_messages
         end
     end
 
@@ -25,7 +25,9 @@ class Api::CommentsController < ApplicationController
     end
 
     def comment_params
+        debugger
         params.require(:comment).permit(:track_id, :author_id, :body)
+        
     end
 
 end

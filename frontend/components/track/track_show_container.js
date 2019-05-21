@@ -4,13 +4,14 @@ import TrackShow from './track_show';
 
 const mapStateToProps = (state, ownProps) => {
     let trackid = ownProps.match.params.id;
-    debugger
+    
     return {
         tracks: state.entities.tracks,
         track: state.entities.tracks[trackid],
         currentUser: state.session.currentUser,
+        username: state.entities.users[state.session.currentUser]
     }
-    debugger
+    
 }
 
 const mapDispatchToProps = (dispatch) => {

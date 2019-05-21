@@ -1,33 +1,13 @@
 html {
-    margin-left:auto;
-    margin-right:auto;
+    align-content: center;
+    display: block;
 
-    padding-right: 180px;
-    margin-right: 180px;
-
-    overflow: auto;
-
-    margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-    vertical-align: baseline;
-    margin-left: -125px;
-    margin-top:-25px;
-    cursor: pointer;
-
+    
 }
 .root {
-    margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-    vertical-align: baseline;
-    margin-left: -125px;
-    margin-top:-25px;
-    cursor: pointer;
+ margin-left: 0;
+  display: block;
+
 }
 
 /* .root {

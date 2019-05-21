@@ -1,13 +1,15 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
+
 class CommentForm extends React.Component {
     constructor(props) {
         super(props)
 
         this.state = {
             body: "",
-            currentUser: this.props.currentUser
+            currentUser: this.props.currentUser,
+            comments: this.props.comments
         }
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,40 +20,35 @@ class CommentForm extends React.Component {
             this.setState({ [type]: e.target.value });
         };
     };
-
+  
    
     handleSubmit(e) {
 
         e.preventDefault();
-        const formData = new FormData();
+        
+        this.props.createComment({ comment: { author_id: this.state.currentUser, track_id: this.props.track.id, body: this.state.body }});
+        
+        this.setState({ body: '' })
+        debugger
+    }
 
-        formData.append('comment[author_id]', this.props.currentUser);
-        formData.append('comment[track_id]', this.props.track.id);
-        formData.append('comment[body]', this.state.body);
+    
 
-        $.ajax({
-            url: '/api/comments',
-            method: 'POST',
-            data: formData,
-            contentType: false,
-            processData: false,
-        }).then((response => console.log(response.message)),
-            response => console.log(response,JSON))
-            .then((console.log("sick!")))
-
-        this.setState({ body: ''})
+    handleRerender() {
+        this.handleSubmit.bind(this)
+        this.props.changeButtonState();
     }
 
     render() {
-        debugger
+    
         return (
             <div className="comment-form-main">
                 <div className="comment-user-avatar">
                     <img className="user-avatar" src="https://image.flaticon.com/icons/svg/149/149071.svg" />
                 </div>
                 <form className="form-comment" action="" onSubmit={this.handleSubmit.bind(this)}>
-                    <input className="submit-input" placeholder="Write a comment" className="comment-input" onChange={this.handleInput("body")} type="text" value={this.state.body}/>
-                    <input className="submit-button" type="submit" value="Submit" onChange={this.handleSubmit.bind(this)} />
+                    <input className="submit-input" placeholder="Write a comment" className="comment-input" onChange={this.handleInput('body')} type="text" value={this.state.body}/>
+                    <input className="submit-button" type="submit" value="Submit" />
                 </form>
             </div>
         )

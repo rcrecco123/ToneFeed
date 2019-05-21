@@ -48,7 +48,7 @@ class TracksIndex extends React.Component {
         let tracks = Object.values(this.props.tracks);
         
         let tracksResult = tracks.filter((track) => track['user_id'] === this.props.currentUser);
-        debugger
+        
         let trackLis = tracksResult.map( track => {
 
 
@@ -67,6 +67,10 @@ class TracksIndex extends React.Component {
                             <div><h3 className="link-to-show" onClick={() => { this.props.history.push(`/tracks/${track.id}`) }}>{track.title}</h3></div>
                         </div>
                         <audio controls src={track.fileUrl}></audio>
+                    </div>
+                    <div className="font-awesome-track-index">
+                        <i className="far fa-thumbs-up"></i>
+                        <i className="fas fa-retweet"></i>
                     </div>
 
                 </li>

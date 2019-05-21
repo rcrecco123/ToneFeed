@@ -1,6 +1,6 @@
 import React from 'react';
 import SignupContainer from '../../components/session/signup_container';
-import LoginContainer from '../../components/session/login_container';
+import LoginContainer from '../../components/session/login_container.js';
 import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';

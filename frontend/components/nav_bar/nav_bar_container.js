@@ -1,11 +1,11 @@
 import { connect } from "react-redux";
 import { logout } from '../../actions/session_actions';
-import NavBar from '../../components/nav_bar/nav_bar';
+import NavBar from './nav_bar';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ session, entities: {users} }) => {
-    debugger
+    
     return {
         currentUserId: session.currentUser,
         currentUser: users[session.currentUser]

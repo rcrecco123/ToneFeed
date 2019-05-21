@@ -35,9 +35,10 @@ class Login extends React.Component {
     };
 
     handle() {
+        if (!this.state) {
         this.props.closeModal();
+        }
         // this.props.history.push('/feed');
-        this.props.closeModal;
     }
 
     //takes in an event

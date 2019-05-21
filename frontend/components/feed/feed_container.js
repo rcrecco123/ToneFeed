@@ -2,7 +2,7 @@ import { withRouter } from 'react-router-dom';
 import React from 'react';
 import { logout } from '../../actions/session_actions';
 import { connect } from 'react-redux';
-import Feed from '../../components/feed/feed';
+import Feed from './feed';
 
 const mapStateToProps = (state) => {
     return {

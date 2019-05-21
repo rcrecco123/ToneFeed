@@ -1,18 +1,18 @@
 import React from 'react';
-import SignUpContainer from './components/session/signup_container';
-import login_container from './components/session/login_container';
-import SplashContainer from './components/splash_container';
-import Modal from './components/modal/modal';
-import NavBar from './components/nav_bar/nav_bar_container';
-import Footer from './components/footer/footer';
-import Feed from './components/feed/feed_container';
-import TracksIndex from './components/track/track_index';
-import TrackShow from './components/track/track_show_container';
-import UploadContainer from './components/upload/upload_container';
-import UserShowContainer from './components/user/user_show_container';
-import Comments from './components/comment/comments_container';
+import SignUpContainer from './session/signup_container';
+import login_container from './session/login_container';
+import SplashContainer from './splash/splash_container';
+import Modal from './modal/modal';
+import NavBar from './nav_bar/nav_bar_container';
+import Footer from './footer/footer';
+import Feed from './feed/feed_container';
+import TracksIndex from './track/track_index';
+import TrackShow from './track/track_show_container';
+import UploadContainer from './upload/upload_container';
+import UserShowContainer from './user/user_show_container';
+import Comments from './comment/comments_container.js';
 import { AuthRoute,
-        ProtectedRoute } from './utils/route_utils';
+        ProtectedRoute } from '../utils/route_utils';
 import {
     Route,
     Redirect,
@@ -33,7 +33,7 @@ export default () => (
     <div>
         <Modal />
         <NavBar />
-            <Switch>
+            <Switch className="switch-components">
                 <AuthRoute exact path='/' component={props => <SplashContainer {...props}/>} />
                 <ProtectedRoute exact path='/users/:userId' component={TracksIndex} />  
                 <ProtectedRoute path='/users/:userId' component={UserShowContainer} />

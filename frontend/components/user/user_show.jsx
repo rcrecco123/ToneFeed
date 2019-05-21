@@ -15,7 +15,7 @@ class UserShow extends React.Component {
 
         const currentUserId = this.props.currentUser
 
-        debugger
+        
         return (
             <div className="user-show-banner">
                 

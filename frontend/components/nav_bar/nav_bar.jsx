@@ -29,7 +29,7 @@ const NavBar = ({ currentUser, logout, openModal, history }) => {
     }
 
     const loggedInBar = () => (
-        <div className="topnav">
+        
             <nav className="topnav">
                 <h2 className="tone-feed-header">ToneFeed</h2>
                 <div className='buttons-two'>
@@ -38,7 +38,7 @@ const NavBar = ({ currentUser, logout, openModal, history }) => {
                     <button className="upload-button-nav" onClick={handleUploadClick}>Upload</button>
                 </div>
             </nav>
-        </div>
+  
     );
 
     return currentUser ? loggedInBar() : null;

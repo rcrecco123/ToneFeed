@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { logout, login } from '../actions/session_actions';
-import { openModal } from '../actions/modal_actions';
+import { logout, login } from '../../actions/session_actions';
+import { openModal } from '../../actions/modal_actions';
 import splash from './splash';
 
 const mapStateToProps = ({ session }) => ({
