@@ -5,7 +5,8 @@ import { fetchTrack } from '../../actions/tracks_actions';
 
 const mapStateToProps = (state) => {
     return {
-        comments: state.entities.comments
+        comments: state.entities.comments,
+        currentUser: state.session.currentUser
     }
 }
 

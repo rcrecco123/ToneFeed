@@ -76,7 +76,7 @@ class Upload extends React.Component {
     }
 
     render() {
-        console.log(this.state);
+
         
         return (
         <div className="upload-form-div">
@@ -97,7 +97,6 @@ class Upload extends React.Component {
                         <input type="file" onChange={this.handleFileImg.bind(this)} />
                         <i className="fa fa-cloud-upload"></i> Choose an image to upload
                     </label>
-
                     <br/>
                     <br/>
                     <br/>

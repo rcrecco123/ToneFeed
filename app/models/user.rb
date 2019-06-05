@@ -23,7 +23,8 @@ class User < ApplicationRecord
 
     has_many :tracks
 
-    has_one_attached :imageß
+    has_one_attached :image
+    has_one_attached :banner_image
 
     def password=(password)
         @password = password

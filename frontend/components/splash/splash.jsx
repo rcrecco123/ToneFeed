@@ -12,7 +12,7 @@ class Splash extends React.Component {
     handleDemo() {
         this.props.demo({email: 'docdoom815@gmail.com', password:'funfunfun1'})
             .then(data => {
-                this.props.history.push("/users/35")
+                this.props.history.push("/feed")
             });
     };
 

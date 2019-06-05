@@ -1,9 +1,12 @@
 import React from 'react';
 import { fetchTracks } from "../../actions/tracks_actions";
+import { fetchUsers } from "../../actions/user_actions";
 import { connect } from 'react-redux';
 import UserShow from '../user/user_show_container';
 import WaveSurfer from 'wavesurfer.js';
 import { withRouter } from 'react-router-dom';
+import TrackIndexItem from './track_index_item';
+
 
 
 
@@ -15,33 +18,23 @@ class TracksIndex extends React.Component {
     constructor(props) {
         super(props);
 //think of state as data that will change over time!
-        
+        //debugger
         this.state = {
 
         }
-        this.handleWave = this.handleWave.bind(this);
     }
 
     //put data into state for component
     componentDidMount() {
-        
+        //debugger
         this.props.fetchTracks();
+        this.props.fetchUsers();
+        
     }
 
-    handleWave(track) {
-
-        let wavesurfer = WaveSurfer.create({
-            container: '#waveform',
-            waveColor: 'violet',
-            progressColor: 'purple'
-        });
-
-        wavesurfer.load(track.fileUrl);
-
+    componentWillUpdate() {
+        //debugger
     }
-
-    // rerenders page is specific piecees of data come back
-    // componentDidUpdate(prevProps)
     
     render() {
         
@@ -50,49 +43,23 @@ class TracksIndex extends React.Component {
         let tracksResult = tracks.filter((track) => track['user_id'] === this.props.currentUser);
         
         let trackLis = tracksResult.map( track => {
-
-
             return (
-                <li className="single-track-index-box"> 
-
-                    <div className="image-container">
-                        <img className="single-track-image" src={track.imageUrl} />
-                    </div>
-
-
-
-                    <div className="track-info">
-                        <div className="inner-info">
-                            <div><h2>{track.username}</h2></div>
-                            <div><h3 className="link-to-show" onClick={() => { this.props.history.push(`/tracks/${track.id}`) }}>{track.title}</h3></div>
-                        </div>
-                        <audio controls src={track.fileUrl}></audio>
-                    </div>
-                    <div className="font-awesome-track-index">
-                        <i className="far fa-thumbs-up"></i>
-                        <i className="fas fa-retweet"></i>
-                    </div>
-
-                </li>
-            );
-
-            
-            
+                <TrackIndexItem url={this.props.history.push.bind(this)} track={track} key={track.id}/>
+            )
         })
+
+        //debugger
 
         return (
             <div>
                 
                 <UserShow />
-
                 <ul>
                     {trackLis}
                 </ul>
 
             </div>
         )
-
-        
             
     }
     
@@ -115,7 +82,8 @@ class TracksIndex extends React.Component {
         const mapDispatchToProps = (dispatch) => {
             // 
             return {
-                fetchTracks: () => dispatch(fetchTracks())
+                fetchTracks: () => dispatch(fetchTracks()),
+                fetchUsers: (users) => dispatch(fetchUsers(users))
             }
         };
 

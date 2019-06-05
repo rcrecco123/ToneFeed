@@ -1,7 +1,6 @@
 import React from 'react';
-import NewCommentForm from './comment_form';
-import CommentList from './comment_index_container';
-import CommentIndex from './comment_index';
+import CommentForm from './comment_form_container';
+import CommentIndex from './comment_index_container';
 
 class Comments extends React.Component {
 
@@ -12,28 +11,24 @@ class Comments extends React.Component {
         }
     }
 
-
     componentWillMount() {
-        
+
     }
 
     changeButtonState() {
         
     }
 
-  
-
     render() {
-        debugger
-
+        
         
         return (
             <div className="comment-main">
-                Hello
+                <CommentForm track={this.props.track} />
+                <CommentIndex track={this.props.track} />
             </div>
         )
     }
-
 }
 
 export default Comments;

@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
             session: {
                 currentUser: window.currentUser.id
             },
-            entities: {
-                users: {
-                    [window.currentUser.id]: window.currentUser
-                }
-            }
+            // entities: {
+            //     users: {
+            //         [window.currentUser.id]: window.currentUser
+            //     }
+            // }
         };
 
         delete window.currentUser;

@@ -17,6 +17,13 @@ export const receiveTrack = track => {
     }
 }
 
+export const receiveDiscover = () => {
+    return {
+        type: RECEIVE_DISCOVER,
+        tracks
+    }
+}
+
 export const fetchTracks = () => dispatch => {
     return (
         TracksUtil.fetchTracks()
@@ -32,5 +39,11 @@ export const fetchTrack = track => dispatch => {
     )
 }
 
+export const fetchDiscover = () => dispatch => {
+    return (
+        TracksUril.fetchDiscover.fetchDiscover()
+            .then(() => dispatch(receiveDiscover()))
+    )
+}
 
 

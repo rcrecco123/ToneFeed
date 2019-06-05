@@ -27,12 +27,17 @@
 
 .comment-list-item-box {
     display: flex;
-    width: 250px;
+    width: 100%;
     height: 60px;
-    padding: 4px;
-    margin: none;
     font-size: 12px;
+    padding: 4px;
+    margin: 0px;
+    margin-left: 65px;
+    border: 1px;
+    border-color: rgba(121, 121, 121, 0.548);
+    
 }
+
 .comment-list-item-box > img {
     width: 38px;
     height: 38px;
@@ -71,4 +76,63 @@
 }
 .users-friends {
     margin-left: 8px;
+}
+
+.fa-trash-alt{
+    position: absolute;
+    cursor: pointer;
+    margin-left: 510px;
+}
+
+.fa-comment-alt{
+    color: rgba(133, 133, 133, 0.671);
+    margin-left: 70px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    
+}
+
+.all-comments-container{ 
+}
+
+.comment-count-part{
+    display: inline-block;
+
+}
+
+.users-track-window{
+    width: 20%;
+}
+
+.users-track-window img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+}
+
+.users-track-window p {
+    font-size: 12px;
+}
+
+.users-track-window button {
+    background-color: #ff5500;
+    padding: 4px;
+    border-radius: 10%;
+    color: white;
+    width: 50px;
+}
+
+.ul-comments{
+    position: relative;
+}
+
+.two-boxes-comment-list{ 
+
+    display: flex;
+    margin-top: 50px;
+}
+
+.right-side-main-comments{
+ margin-left: -25px;
+ padding: -25px;
 }

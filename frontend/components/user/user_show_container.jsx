@@ -1,17 +1,18 @@
 import { connect } from 'react-redux';
-import UserShow from './user_show';
+import UserShow from './user_show'
 
 const mapStateToProps = (state) => {
+    //debugger
     return {
-        currentUser: state.session.currentUser,
-        userModel: state.entities.users
+        currentUser: state.entities.users[state.session.currentUser],
+        
         // currentUserAvatar: eventually need this
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
+        
     }
 }
 

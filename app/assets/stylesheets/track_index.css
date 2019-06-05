@@ -19,6 +19,7 @@
 
 .link-to-show {
     cursor: pointer;
+    margin: 0px;
     
 }
 
@@ -31,7 +32,10 @@
     padding: -15px;
 }
 
-
+.inner-info {
+    padding: 0px;
+    margin: 2px;
+}
 
 .track-info {
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
@@ -54,3 +58,17 @@
     color: rgb(187, 64, 3);
     cursor: pointer;
 }
+
+.track-index-item-waveform {
+    height: 200px;
+    width: 200px;
+}
+
+.track-inner-info {
+    margin: 0px;
+}
+
+.link-to-show {
+    margin: 0px;
+}
+

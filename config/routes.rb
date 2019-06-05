@@ -5,11 +5,14 @@ Rails.application.routes.draw do
 
   resources :tracks, only: :show
 
-  
   namespace :api, defaults: {format: :json} do
-    resources :tracks, only: [:create, :index, :show]
+    resources :tracks, only: [:create, :index, :show, :discover] do
+      collection do
+        get 'discover'
+      end
+    end
     resources :comments, only: [:create, :destroy, :index]
-    resources :users, only: [:new, :create, :show, :index]
+    resources :users, only: [:create, :show, :index, :update]
     resource :session, only: [:new, :create, :destroy]
   end
 

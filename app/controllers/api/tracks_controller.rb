@@ -1,9 +1,9 @@
 class Api::TracksController < ApplicationController
     
     def create
-        debugger
+        
         @track = Track.new(track_params)
-        debugger
+        
         if @track.save
             render json: {message: "File successfully uploaded"}
         else
@@ -19,6 +19,11 @@ class Api::TracksController < ApplicationController
     def index
         @tracks = Track.all
         render "api/tracks/index"
+    end
+
+    def discover
+        @tracks = Track.all.sample(8)
+        render "api/tracks/discover"
     end
 
 

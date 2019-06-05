@@ -26,6 +26,7 @@
     width: 50%;
     margin: auto;
     margin-left: 20px;
+    margin-top: 17px;
 }
 
 .track-show-user { 
@@ -33,9 +34,14 @@
     padding-right: 6px;
     padding-left: 6px;
     display: inline-block;  
-    color: white;  
+    color: rgb(184, 184, 184);  
     background-color:rgb(26, 26, 26);
     margin: 4px;
+    cursor: pointer;
+}
+
+.track-show-user:hover {
+    color: white;
 }
 
 .track-show-title { 

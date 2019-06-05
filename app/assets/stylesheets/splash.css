@@ -4,6 +4,7 @@ html {
     justify-content: space-around;
     margin: 0 auto;
     margin-top: -70px;
+    margin-left: 70px;
 }
 body, header, ul, li, div, img {
     margin: 0;

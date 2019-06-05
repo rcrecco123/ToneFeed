@@ -10,23 +10,26 @@ class UserShow extends React.Component {
         }
     }
 
+    
 
     render() {
 
-        const currentUserId = this.props.currentUser
+        if (this.props.currentUser === undefined) {
+            return null
+        }
 
+        //BOOLEAN ARE VALID REACT CHILDREN
+        //this.props.currentUser
         
         return (
             <div className="user-show-banner">
-                
                 <div className="user-profile-image">
-                    <img className="user-avatar" src="https://image.flaticon.com/icons/svg/149/149071.svg"/>
+                    <img className="user-avatar" src={this.props.currentUser.imageUrl}/>
                 </div>
 
                 <div className="info-box-feed">
-                    <h2 className="username-feed">{this.props.userModel[currentUserId].username}</h2>
+                    <h2 className="username-feed">{this.props.currentUser.username}</h2>
                 </div>
-
             </div>
         )
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import CommentIndexItem from './comment_index_item';
 
 class CommentIndex extends React.Component {
     constructor(props) {
@@ -10,40 +11,49 @@ class CommentIndex extends React.Component {
 
 
     componentWillMount() {
-
+        this.props.fetchComments();
     }
 
     render() {
-
+        
         const comments = Object.values(this.props.comments);
-        debugger
-        var results = comments.filter(comment => comment['track_id'] === this.props.track.id);
-
+        const results = comments.filter(comment => comment['track_id'] === this.props.track.id);
+        
+        
 
         const final = results.map(comment => {
-            debugger
-            // return (
-            //     <li className="comment-list-item-box">
-            //         <img src="https://image.flaticon.com/icons/svg/149/149071.svg" alt="" />
-            //         <div className="comment-list-item-box-p">
-            //             <p>{comment.created_at}</p>
-            //             <p>{comment.author}</p>
-            //             <p>{comment.body}</p>
-            //         </div>
-            //     </li>
-            // )
-
+            
+            //debugger
 
             return (
-                <CommentIndexItem comment={comment} />
+
+                <CommentIndexItem destroyComment={this.props.destroyComment} comment={comment} key={comment.id} />
+
             )
 
         })
-        debugger
+            return (
+                <div className="two-boxes-comment-list">
 
-        <div>
-            Hey!
-        </div>
+                    <div className="users-track-window">
+                        <img src="https://image.flaticon.com/icons/svg/149/149071.svg" alt="" />
+                        <p>{this.props.user.username}</p>
+                        <button>Follow</button>
+                    </div>
+                    <div className="right-side-main-comments">
+
+                        <div className="all-comments-container">
+                            <div className="comment-count-part">
+                                <i className="fas fa-comment-alt"> {results.length} comments</i>
+                            </div>
+                        </div>
+                        <ul className="ul-comments">
+                            {final}
+                        </ul>
+                    </div>
+                </div>
+               
+            )
     }
 }
 

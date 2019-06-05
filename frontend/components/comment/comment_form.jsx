@@ -8,10 +8,9 @@ class CommentForm extends React.Component {
 
         this.state = {
             body: "",
-            currentUser: this.props.currentUser,
             comments: this.props.comments
         }
-
+        //debugger
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -26,17 +25,14 @@ class CommentForm extends React.Component {
 
         e.preventDefault();
         
-        this.props.createComment({ comment: { author_id: this.state.currentUser, track_id: this.props.track.id, body: this.state.body }});
+        
+        //debugger
+        const comment = Object.assign({}, { comment: { author_id: this.props.currentUser, track_id: this.props.track.id, body: this.state.body.toString() } })
+
+        this.props.createComment(comment);
         
         this.setState({ body: '' })
-        debugger
-    }
-
-    
-
-    handleRerender() {
-        this.handleSubmit.bind(this)
-        this.props.changeButtonState();
+        
     }
 
     render() {

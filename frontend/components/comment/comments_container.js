@@ -8,7 +8,7 @@ import { withRouter } from "react-router-dom";
 const mapStateToProps = (state, ownProps) => {
     let trackid = parseInt(ownProps.match.params.id);
     
-    
+    //debugger
 
     //connect comment list to store instead for better practice.
     return {
@@ -21,7 +21,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => {
-    debugger
+    
     return {
         fetchTrack: (id) => dispatch(fetchTrack(id)),
         fetchComments: (trackId) => dispatch(fetchComments(trackId)),

@@ -2,10 +2,10 @@ import * as CommentsUtil from '../utils/comments_api_util';
 
 export const RECEIVE_COMMENTS = "RECEIVE_COMMENTS";
 export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
-export const DELETE_COMMENTS = "DELETE_COMMENTS";
+export const DELETE_COMMENT = "DELETE_COMMENT";
 
 export const receiveComment = comment => {
-    debugger
+    
     return {
         type: RECEIVE_COMMENT,
         comment
@@ -13,9 +13,10 @@ export const receiveComment = comment => {
 }
 
 export const deleteComment = comment => {
+    //debugger
     return {
         type: DELETE_COMMENT,
-        comment: comment.id
+        comment
     }
 }
 
@@ -33,16 +34,14 @@ export const createComment = comment => dispatch => {
         ));
 };
 
-export const createReview = review => dispatch => (
-
-    APIUtil.createReview(review).then(review => (
-        dispatch(receiveReview(review))
-    ))
-);
-
 export const destroyComment = comment => dispatch => {
+    //debugger
     return (
         CommentsUtil.destroyComment(comment)
-            .then((comment) => dispatch(deleteComment(comment))
+            .then((comment) => {
+            //debugger
+            dispatch(deleteComment(comment))
+            }
         ))
 }
+
