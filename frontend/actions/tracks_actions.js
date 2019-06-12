@@ -2,6 +2,7 @@ import * as TracksUtil from "../utils/track_api_util";
 
 export const RECEIVE_TRACKS = "RECEIVE_TRACKS";
 export const RECEIVE_TRACK = "RECEIVE_TRACK";
+export const REMOVE_TRACK = "REMOVE_TRACK";
 
 export const receiveTracks = tracks => {
     return {
@@ -24,6 +25,13 @@ export const receiveDiscover = () => {
     }
 }
 
+export const removeTrack = track => {
+    return {
+        type: REMOVE_TRACK,
+        track
+    }
+}
+
 export const fetchTracks = () => dispatch => {
     return (
         TracksUtil.fetchTracks()
@@ -41,8 +49,22 @@ export const fetchTrack = track => dispatch => {
 
 export const fetchDiscover = () => dispatch => {
     return (
-        TracksUril.fetchDiscover.fetchDiscover()
+        TracksUtil.fetchDiscover()
             .then(() => dispatch(receiveDiscover()))
+    )
+}
+
+export const deleteTrack = track => dispatch => {
+    return (
+        TracksUtil.deleteTrack(track)
+            .then(track => dispatch(removeTrack(track)))
+    )
+}
+
+export const updateTrack = track => dispatch => {
+    return (
+        TracksUtil.updateTrack(track)
+            .then(track => dispatch(receiveTrack(track)))
     )
 }
 

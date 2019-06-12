@@ -27,6 +27,7 @@ class Api::CommentsController < ApplicationController
         @comment.delete
     end
 
+
     def comment_params
       
         params.require(:comment).permit(:track_id, :author_id, :body)

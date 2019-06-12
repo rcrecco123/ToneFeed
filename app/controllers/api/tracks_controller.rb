@@ -21,10 +21,36 @@ class Api::TracksController < ApplicationController
         render "api/tracks/index"
     end
 
+    def destroy
+        @track = Track.find(params[:id])
+        @track.delete
+    end
+
     def discover
         @tracks = Track.all.sample(8)
         render "api/tracks/discover"
     end
+
+    def update
+
+        @track = Track.find(params[:id])
+
+        if @track.update_attributes(track_params)
+            @track.save
+        else
+            render '/api/tracks/show'
+        end
+    end
+
+    # def update
+    #     @track = Track.find(params[:id])
+
+    #     if @track.update_attributes(track_params)
+    #         @track.save
+    #         render '/api/tracks/:id'
+    #     else
+
+    # end
 
 
     def track_params

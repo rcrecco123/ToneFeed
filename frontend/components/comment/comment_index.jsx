@@ -37,7 +37,7 @@ class CommentIndex extends React.Component {
 
                     <div className="users-track-window">
                         <img src="https://image.flaticon.com/icons/svg/149/149071.svg" alt="" />
-                        <p>{this.props.user.username}</p>
+                        {/* <p>{this.props.user.username}</p> */}
                         <button>Follow</button>
                     </div>
                     <div className="right-side-main-comments">

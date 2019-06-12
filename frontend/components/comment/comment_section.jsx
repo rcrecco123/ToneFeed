@@ -25,6 +25,7 @@ class Comments extends React.Component {
         return (
             <div className="comment-main">
                 <CommentForm track={this.props.track} />
+                <i className="far fa-edit" onClick={() => this.props.openModal('trackUpdate')}></i>
                 <CommentIndex track={this.props.track} />
             </div>
         )

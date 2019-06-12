@@ -11,13 +11,6 @@ class UserShowFeed extends React.Component {
         }
     }
 
-    componentDidMount() {
-        
-    }
-
-    componentWillUpdate(prev) {
-  
-    }
 
     //look in to did mount and update 
     //component did update (prev state and prev props)

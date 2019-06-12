@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :tracks, only: :show
 
   namespace :api, defaults: {format: :json} do
-    resources :tracks, only: [:create, :index, :show, :discover] do
+    resources :tracks, only: [:create, :destroy, :index, :show, :update, :discover] do
       collection do
         get 'discover'
       end

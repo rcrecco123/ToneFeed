@@ -1,5 +1,5 @@
 import React from 'react';
-import { fetchTracks } from "../../actions/tracks_actions";
+import { fetchTracks, deleteTrack } from "../../actions/tracks_actions";
 import { fetchUsers } from "../../actions/user_actions";
 import { connect } from 'react-redux';
 import UserShow from '../user/user_show_container';
@@ -26,14 +26,8 @@ class TracksIndex extends React.Component {
 
     //put data into state for component
     componentDidMount() {
-        //debugger
         this.props.fetchTracks();
         this.props.fetchUsers();
-        
-    }
-
-    componentWillUpdate() {
-        //debugger
     }
     
     render() {
@@ -44,7 +38,7 @@ class TracksIndex extends React.Component {
         
         let trackLis = tracksResult.map( track => {
             return (
-                <TrackIndexItem url={this.props.history.push.bind(this)} track={track} key={track.id}/>
+                <TrackIndexItem url={this.props.history.push.bind(this)} id={track.id} deleteTrack={this.props.deleteTrack} track={track} key={track.id}/>
             )
         })
 
@@ -83,7 +77,8 @@ class TracksIndex extends React.Component {
             // 
             return {
                 fetchTracks: () => dispatch(fetchTracks()),
-                fetchUsers: (users) => dispatch(fetchUsers(users))
+                fetchUsers: (users) => dispatch(fetchUsers(users)),
+                deleteTrack: id => dispatch(deleteTrack(id)),
             }
         };
 

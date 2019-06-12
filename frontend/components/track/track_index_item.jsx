@@ -1,5 +1,6 @@
 import React from 'react';
 import WaveSurfer from 'wavesurfer.js';
+import { deleteTrack } from '../../actions/tracks_actions';
 
 class TrackIndexItem extends React.Component {
 
@@ -12,6 +13,7 @@ class TrackIndexItem extends React.Component {
 
         this.playClick = this.playClick.bind(this);
         this.handlePlayToggle = this.handlePlayToggle.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
 
 
@@ -35,8 +37,8 @@ class TrackIndexItem extends React.Component {
                 cursorColor: 'transparent'
             })
         }) 
-    
-        // this.state.ws.load(this.props.track.fileUrl);
+        
+        this.state.ws.load(this.props.track.fileUrl);
     }
 
     playClick() {
@@ -48,9 +50,11 @@ class TrackIndexItem extends React.Component {
         const oldStyle = document.getElementById(`index-play${this.props.track.id}`).className;
         const newClassName = oldStyle === "fas fa-play-circle" ? "fas fa-pause-circle" : "fas fa-play-circle"
         document.getElementById(`index-play${this.props.track.id}`).className = newClassName
-            // < i class="fas fa-pause-circle" ></i >
     }
  
+    handleDelete() {
+        this.props.deleteTrack(this.props.track.id);
+    }
 
     render() {
         //debugger
@@ -97,9 +101,11 @@ class TrackIndexItem extends React.Component {
 
 
                 <div className="track-index-item-waveform" id={`waveform${this.props.track.id}`}></div>
-                    <div className="font-awesome-track-index">
+                
+                <div className="font-awesome-track-index">
                     <i className="far fa-thumbs-up"></i>
                     <i className="fas fa-retweet"></i>
+                    <i className="far fa-trash-alt" onClick={deleteTrack(this.props.track.id).bind(this)}></i>
                 </div>
 
             </li>

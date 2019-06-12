@@ -12,6 +12,7 @@ import TrackShow from './track/track_show_container';
 import UploadContainer from './upload/upload_container';
 import UserShowContainer from './user/user_show_container';
 import Comments from './comment/comments_container.js';
+import TrackUpdate from './track/track_update_container';
 import { AuthRoute,
         ProtectedRoute } from '../utils/route_utils';
 import {
@@ -41,6 +42,7 @@ export default () => (
                 <Route exact path='/tracks/:id' component={TrackShow} />              
                 <ProtectedRoute path='/upload' component={UploadContainer} />              
                 <Route path="/users/:id/" component={TracksIndexFeed} />
+                
             </Switch>
                 <Route exact path='/tracks/:id' component={Comments} />
         <Footer />

@@ -4,6 +4,7 @@ import LoginContainer from '../../components/session/login_container.js';
 import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
+import TrackUpdate from '../../components/track/track_update_container';
 
 
 
@@ -18,6 +19,9 @@ function Modal({ modal, closeModal }) {
             break;
         case 'signup':
             component = <SignupContainer />;
+            break;
+        case 'trackUpdate':
+            component = <TrackUpdate />;
             break;
         default:
             return null;

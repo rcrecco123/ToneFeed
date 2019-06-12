@@ -1,5 +1,6 @@
 import { fetchTrack } from '../../actions/tracks_actions';
 import { fetchComments, createComment } from '../../actions/comments_actions';
+import { openModal } from '../../actions/modal_actions';
 // import { postTrack } from '../../actions/comments_actions';
 import { connect } from 'react-redux';
 import Comments from '../comment/comment_section';
@@ -25,7 +26,8 @@ const mapDispatchToProps = dispatch => {
     return {
         fetchTrack: (id) => dispatch(fetchTrack(id)),
         fetchComments: (trackId) => dispatch(fetchComments(trackId)),
-        createComment: (comment) => dispatch(createComment(comment))
+        createComment: (comment) => dispatch(createComment(comment)),
+        openModal: modal => dispatch(openModal(modal))
     }
 }
 

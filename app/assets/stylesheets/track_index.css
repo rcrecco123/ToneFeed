@@ -59,6 +59,10 @@
     cursor: pointer;
 }
 
+.fa-trash-alt {
+    margin: 0px;
+}
+
 .track-index-item-waveform {
     height: 200px;
     width: 200px;

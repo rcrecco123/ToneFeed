@@ -11,18 +11,10 @@ class Splash extends React.Component {
 
     handleDemo() {
         this.props.demo({email: 'docdoom815@gmail.com', password:'funfunfun1'})
-            .then(data => {
+            .then(() => {
                 this.props.history.push("/feed")
             });
     };
-
-    componentWillReceiveProps(props) {
-        render();
-    };
-
-    componentDidUpdate() {
-        render();
-    }
 
     
     render() {
@@ -55,7 +47,7 @@ class Splash extends React.Component {
                         </li>
                     </ul>
                 </div>
-                <div className="splash-thumbnails-one">
+                {/* <div className="splash-thumbnails-one">
                     <div></div>
                     <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
                     <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
@@ -67,7 +59,7 @@ class Splash extends React.Component {
                     <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
                     <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
                     <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
-                </div>
+                </div> */}
                 <div className='splash-banner'>
                     <img src='https://a-v2.sndcdn.com/assets/images/home/hp_creator_image-e08dee4.jpg'></img>
                     <div className='banner-text'>

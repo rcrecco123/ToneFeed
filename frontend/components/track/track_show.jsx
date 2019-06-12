@@ -90,7 +90,7 @@ class TrackShow extends React.Component {
                             <div className="track-show-user" onClick={() => {
                                 this.props.history.push("/feed");
                             }}>
-                                {this.props.username.username}
+                                {/* {this.props.username.username} */}
                             </div>
                             <br/>
                             <div className="track-show-title">
