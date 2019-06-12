@@ -25,10 +25,10 @@ export const receiveDiscover = () => {
     }
 }
 
-export const removeTrack = track => {
+export const removeTrack = trackId => {
     return {
         type: REMOVE_TRACK,
-        track
+        trackId
     }
 }
 
@@ -54,10 +54,11 @@ export const fetchDiscover = () => dispatch => {
     )
 }
 
-export const deleteTrack = track => dispatch => {
+export const deleteTrack = id => dispatch => {
+    
     return (
-        TracksUtil.deleteTrack(track)
-            .then(track => dispatch(removeTrack(track)))
+        TracksUtil.deleteTrack(id)
+            .then(() => dispatch(removeTrack(id)))
     )
 }
 

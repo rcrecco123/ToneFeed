@@ -1,6 +1,5 @@
 import React from 'react';
 import WaveSurfer from 'wavesurfer.js';
-import { deleteTrack } from '../../actions/tracks_actions';
 
 class TrackIndexItem extends React.Component {
 
@@ -105,7 +104,7 @@ class TrackIndexItem extends React.Component {
                 <div className="font-awesome-track-index">
                     <i className="far fa-thumbs-up"></i>
                     <i className="fas fa-retweet"></i>
-                    <i className="far fa-trash-alt" onClick={deleteTrack(this.props.track.id).bind(this)}></i>
+                    <i className="far fa-trash-alt" onClick={this.handleDelete.bind(this)}></i>
                 </div>
 
             </li>

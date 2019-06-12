@@ -10,10 +10,11 @@ export default (oldState = {}, action) => {
         case (RECEIVE_TRACK):
             return Object.assign({}, oldState, action.track);
         case (REMOVE_TRACK):
-            delete nextState[Object.keys(action.track)];
+            delete nextState[action.trackId];
             return nextState;
         default:
             return oldState;
     }
 };
 
+//
