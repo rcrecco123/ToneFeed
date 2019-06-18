@@ -5,7 +5,7 @@ class Api::TracksController < ApplicationController
         @track = Track.new(track_params)
         
         if @track.save
-            render json: {message: "File successfully uploaded"}
+            render '/api/tracks/show'
         else
             render json: @track.errors.full_messages
         end

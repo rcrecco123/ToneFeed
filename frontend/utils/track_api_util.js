@@ -15,13 +15,6 @@ export const fetchTrack = (id) => {
     })
 };
 
-export const discoverTrack = () => {
-    return $.ajax({
-        method: 'GET',
-        url: '/api/tracks/discover'
-    })
-}
-
 export const deleteTrack = (id) => {
     return $.ajax({
         method: 'DELETE',
@@ -33,5 +26,23 @@ export const updateTrack = id => {
     return $.ajax({
         method: "PATCH",
         url: `/api/tracks/${id}`
+    })
+}
+
+export const uploadTrack = formData => {
+    return $.ajax({
+        url: "/api/tracks",
+        method: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+    })
+}
+
+export const getRandomTracks = () => {
+    
+    return $.ajax({
+        method: "GET",
+        url: "/api/tracks/discover"
     })
 }

@@ -41,8 +41,7 @@ export default () => (
                 <ProtectedRoute path='/feed' component={TracksIndex} />
                 <Route exact path='/tracks/:id' component={TrackShow} />              
                 <ProtectedRoute path='/upload' component={UploadContainer} />              
-                <Route path="/users/:id/" component={TracksIndexFeed} />
-                
+                <Route path="/users/:id/" component={TracksIndexFeed} />                
             </Switch>
                 <Route exact path='/tracks/:id' component={Comments} />
         <Footer />

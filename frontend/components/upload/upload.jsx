@@ -61,18 +61,9 @@ class Upload extends React.Component {
         formData.append('track[image]', this.state.image);
         formData.append('track[user_id]', this.props.currentUser);
         
-        
+        this.props.uploadTrack(formData)
+            .then(() => this.props.history.push(`/feed`));
 
-        $.ajax({
-            url: "/api/tracks",
-            method: "POST",
-            data: formData,
-            contentType: false,
-            processData: false,
-        }).then((response => console.log(response.message)),
-                 response => console.log(response.JSON))
-                 .then((console.log()))
-        if (formData) this.props.history.push(`/feed`);
     }
 
     render() {

@@ -3,8 +3,10 @@ import * as TracksUtil from "../utils/track_api_util";
 export const RECEIVE_TRACKS = "RECEIVE_TRACKS";
 export const RECEIVE_TRACK = "RECEIVE_TRACK";
 export const REMOVE_TRACK = "REMOVE_TRACK";
+export const RECEIVE_DISCOVER = "RECEIVE_DISCOVER";
 
 export const receiveTracks = tracks => {
+    
     return {
         type: RECEIVE_TRACKS,
         tracks
@@ -12,13 +14,15 @@ export const receiveTracks = tracks => {
 }
 
 export const receiveTrack = track => {
+    
     return {
         type: RECEIVE_TRACK,
         track
     }
 }
 
-export const receiveDiscover = () => {
+export const receiveDiscover = tracks => {
+    
     return {
         type: RECEIVE_DISCOVER,
         tracks
@@ -69,4 +73,18 @@ export const updateTrack = track => dispatch => {
     )
 }
 
+export const uploadTrack = formData => dispatch => {
+    return (
+        TracksUtil.uploadTrack(formData)
+            .then(track => dispatch(receiveTrack(track)))
+    )
+}
+
+export const getRandomTracks = () => dispatch => {
+    
+    return (
+        TracksUtil.getRandomTracks()
+            .then(tracks => dispatch(receiveDiscover(tracks)))
+    )
+}
 

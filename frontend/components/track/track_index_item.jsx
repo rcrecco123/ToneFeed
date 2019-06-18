@@ -37,7 +37,7 @@ class TrackIndexItem extends React.Component {
             })
         }) 
         
-        this.state.ws.load(this.props.track.fileUrl);
+        // this.state.ws.load(this.props.track.fileUrl);
     }
 
     playClick() {

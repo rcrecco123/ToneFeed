@@ -1,5 +1,6 @@
 // SPLASH PAGE!
 import React from 'react';
+import TrackSplash from "../../components/track/track_splash_container";
 
 class Splash extends React.Component {
 
@@ -11,11 +12,15 @@ class Splash extends React.Component {
 
     handleDemo() {
         this.props.demo({email: 'docdoom815@gmail.com', password:'funfunfun1'})
-            .then(() => {
+            .then(() => { debugger
                 this.props.history.push("/feed")
+                debugger
             });
     };
 
+    componentDidMount() {
+
+    }
     
     render() {
 
@@ -60,6 +65,7 @@ class Splash extends React.Component {
                     <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
                     <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
                 </div> */}
+                <TrackSplash getRandomTracks={this.props.getRandomTracks} />
                 <div className='splash-banner'>
                     <img src='https://a-v2.sndcdn.com/assets/images/home/hp_creator_image-e08dee4.jpg'></img>
                     <div className='banner-text'>

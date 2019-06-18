@@ -16,6 +16,7 @@
         title: "crazy beats",
         user_id: User.first.id,
     })
+    track_one.track.attach(io: File.open('‎⁨/Ronald/Users⁩/Ronald_Crecco⁩/Desktop⁩/TONEFEEDTRACKS/test1.mp3'), filename: "test1.mp3")
     track_one.save!
     track_two = Track.new({
         title: "techno song!",

@@ -17,7 +17,7 @@ class UserShowFeed extends React.Component {
     // can compare prev props with new props
 
     render() {
-        debugger
+        
         if (this.props.user === undefined) {
             return null
         }
