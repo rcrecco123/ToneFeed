@@ -29,8 +29,8 @@ class TrackSplash extends React.Component {
 
 
         return (
-            <div>
-                HELLO
+            <div className="track-splash-master">
+
                 {newTrackItems}
             </div>
         )

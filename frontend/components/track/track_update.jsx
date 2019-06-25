@@ -65,7 +65,7 @@ class TrackUpdate extends React.Component {
                      </label>
                     <br />
                     <br />
-                    <input type="submit" value="SUBMIT!"/>
+                    <input className="" type="submit" value="SUBMIT!"/>
 
                 </form>
             </div>

@@ -22,7 +22,7 @@ class TrackShow extends React.Component {
         // state.entities.tracks via reducer.
     componentDidMount() {
         this.props.fetchTrack(this.props.match.params.id);
-        
+        this.props.fetchUsers();
 
         this.setState({ ws: WaveSurfer.create({
             container: '#waveform',
@@ -55,11 +55,12 @@ class TrackShow extends React.Component {
         if (this.props.track) {
             var track = Object.values(this.props.track);
             
-            var trackUser = this.props.track.username;
+            var userName = this.props.user.username;
             var trackTitle = this.props.track.title;
             var trackFileUrl = this.props.track.fileUrl;
             var trackImg = this.props.track.imageUrl
         } else {
+            var userName = null;
             var track = null;
             var trackUser = null;
             var trackTitle = null;
@@ -90,7 +91,7 @@ class TrackShow extends React.Component {
                             <div className="track-show-user" onClick={() => {
                                 this.props.history.push("/feed");
                             }}>
-                                {/* {this.props.username.username} */}
+                                {userName}
                             </div>
                             <br/>
                             <div className="track-show-title">

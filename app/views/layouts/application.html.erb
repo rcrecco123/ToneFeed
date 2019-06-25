@@ -10,6 +10,8 @@
     <%= javascript_include_tag 'application' %>
     <script type="livereload.js"></script>
    
+    
+
     <% if current_user %>
     <%# //this "bootstraps" window.currentUser to the window/console %>
     <%# //code can access window.currentUser, then gets deleted %>
@@ -28,7 +30,7 @@
     <div class="root-two">
       <div class="navbar-background"></div>
       <% @current_user %>
-      <%= yield %>
+      <%= yield %> 
     </div>
   </body>
 </html>

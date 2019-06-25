@@ -1,0 +1,77 @@
+
+
+.track-splash-image {
+    width: 200px;
+    height: 200px;
+}
+
+.track-splash-master {
+    margin-left: -50px;
+    margin-bottom: 0px;
+    width: 1236px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 5px;
+  column-gap: 5px;
+  background-color: white;
+  padding: 2px;
+
+}
+
+.track-splash-title{
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode",
+    "Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+}
+
+.play-circle-splash{
+  width: 47px;
+  height: 47px;
+  font-size: 37px;
+  color: #f50;
+  margin-top: 27px;
+  cursor: pointer;
+}
+
+.pause-circle-splash{
+  width: 47px;
+  height: 47px;
+  font-size: 37px;
+  color: #f50;
+  margin-top: 27px;
+  cursor: pointer;
+}
+
+.fa-play-circle{
+  padding: 0px;
+  margin-top: 10px;
+  margin-left: -170px;
+  width: 47px;
+  height: 47px;
+}
+.fa-pause-circle{
+  padding: 0px;
+  margin-top: 10px;
+  margin-left: -170px;
+  width: 47px;
+  height: 47px;
+  color: rgb(rgb(146, 146, 146), green, blue)
+}
+
+.circle-play-index{
+  width: 47px;
+  height: 47px;
+  font-size: 37px;
+  color: #f50;
+  margin-top: 27px;
+  cursor: pointer;
+}
+
+/* .track-splash-item-master {
+    width: 175px;
+    height: 215px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 2px;
+  font-size: 30px;
+  text-align: center;
+} */

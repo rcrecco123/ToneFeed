@@ -27,7 +27,7 @@
 
 .comment-list-item-box {
     display: flex;
-    width: 100%;
+    width: 550px;
     height: 60px;
     font-size: 12px;
     padding: 4px;
@@ -79,9 +79,9 @@
 }
 
 .fa-trash-alt{
-    position: absolute;
+
     cursor: pointer;
-    margin-left: 510px;
+    margin-left: 810px;
 }
 
 .fa-comment-alt{
@@ -90,9 +90,6 @@
     margin-top: 25px;
     margin-bottom: 25px;
     
-}
-
-.all-comments-container{ 
 }
 
 .comment-count-part{
