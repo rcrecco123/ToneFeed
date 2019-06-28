@@ -27,15 +27,21 @@
 
 .comment-list-item-box {
     display: flex;
+    justify-content: space-between;
     width: 550px;
     height: 60px;
     font-size: 12px;
     padding: 4px;
     margin: 0px;
-    margin-left: 65px;
+    margin-left: 15px;
     border: 1px;
     border-color: rgba(121, 121, 121, 0.548);
     
+}
+
+.comment-list-item-box-p{
+    display: flex;
+    flex-direction: column;
 }
 
 .comment-list-item-box > img {
@@ -94,6 +100,7 @@
 
 .comment-count-part{
     display: inline-block;
+    margin-bottom: 25px;
 
 }
 
@@ -132,4 +139,13 @@
 .right-side-main-comments{
  margin-left: -25px;
  padding: -25px;
+}
+
+.comment-flex-box-1{
+    display: flex;
+    justify-content: space-between;
+}
+
+#button{
+    cursor: pointer;
 }

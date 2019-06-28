@@ -21,40 +21,27 @@
 .track-splash-title{
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode",
     "Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    padding: 1px;
 }
 
-.play-circle-splash{
+.play-circle-splash, .pause-circle-splash{
   width: 47px;
   height: 47px;
   font-size: 37px;
   color: #f50;
-  margin-top: 27px;
+  margin-top: 45px;
+  margin-left: 67px;
   cursor: pointer;
+  border: 5px solid;
 }
 
-.pause-circle-splash{
-  width: 47px;
-  height: 47px;
-  font-size: 37px;
-  color: #f50;
-  margin-top: 27px;
-  cursor: pointer;
-}
-
-.fa-play-circle{
+.fa-play-circle, .fa-pause-circle{
   padding: 0px;
   margin-top: 10px;
   margin-left: -170px;
+  margin-bottom: 50px;
   width: 47px;
   height: 47px;
-}
-.fa-pause-circle{
-  padding: 0px;
-  margin-top: 10px;
-  margin-left: -170px;
-  width: 47px;
-  height: 47px;
-  /* color: rgb(rgb(146, 146, 146), green, blue) */
 }
 
 .circle-play-index{
@@ -66,12 +53,7 @@
   cursor: pointer;
 }
 
-/* .track-splash-item-master {
-    width: 175px;
-    height: 215px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+.track-splash-item-master {
   padding: 2px;
-  font-size: 30px;
-  text-align: center;
-} */
+  margin-bottom: 2px;
+}

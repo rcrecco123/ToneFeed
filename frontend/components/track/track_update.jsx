@@ -23,16 +23,18 @@ class TrackUpdate extends React.Component {
 
         formData.append('track[title]', this.state.title);
         // formData.append('track[image]', this.state.image);
-
+        debugger
         $.ajax({
-            url: `/api/tracks/53`,
+            url: `/api/tracks/${this.props.match.params.id}`,
             method: "PATCH",
             data: formData,
             contentType: false,
             processData: false,
         }).then((response => console.log(response.message)),
             response => console.log(response.JSON))
-            .then((console.log()))
+            .then((console.log())).then(this.props.closeModal());
+
+        this.props.closeModal();
 
         if (formData) this.props.history.push(`/feed`);
     }
@@ -50,6 +52,8 @@ class TrackUpdate extends React.Component {
     }
 
     render() {
+
+        debugger
 
         return (
             <div className="modal-form">

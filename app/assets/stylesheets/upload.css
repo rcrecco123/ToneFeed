@@ -1,25 +1,25 @@
 
-
+/* 
 .upload-form {
     margin-left: -100px;
     width: 1240px;
     height: 70px;
     
     /* margin-top: 400px; */
-}
-
-.upload-form-div {
-    
-}
+} */
 
 .overflow-upload {
+    margin-top: 50px;
+}
+
+/* .overflow-upload {
     position: relative;
     width: 1240px;
     height: 15px;
     background-color: rgb(255, 255, 255);
     
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
-}
+} */
 
 .track-title {
     padding-top: 100px;
@@ -31,7 +31,9 @@
 
 .click-to-upload {
     margin-top: 100px;
-    text-align: center;
+    margin-left: -110px;
+    display: flex;
+    justify-content: space-around;
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
 }
 

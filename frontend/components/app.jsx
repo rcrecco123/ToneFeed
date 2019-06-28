@@ -17,10 +17,7 @@ import { AuthRoute,
         ProtectedRoute } from '../utils/route_utils';
 import {
     Route,
-    Redirect,
     Switch,
-    Link,
-    HashRouter
 } from 'react-router-dom';
 
 
@@ -34,7 +31,8 @@ export default () => (
     //want users without account to see
     <div className="app-reset">
         <script type="livereload.js"></script>
-        <Modal />
+        <Route path='/' component={Modal}/>
+        <Route path='/tracks/:id' component={Modal}/>
         <NavBar />
             <Switch className="switch-components">
                 <AuthRoute exact path='/' component={props => <SplashContainer {...props}/>} />              

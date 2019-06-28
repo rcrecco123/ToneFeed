@@ -1,6 +1,8 @@
 .topnav {
   margin: 0;
-  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
   background-color: #333;
   position: fixed;
   top: 0;
@@ -10,14 +12,55 @@
   z-index: 5;
 }
 
+.nav-bar-search-bar{
+  width: 400px;
+  height: 15px;
+  margin-top: 8px;
+  padding: 5px;
+}
+
+.fa-search{
+  padding: 15px;
+  color: gray;
+  cursor: pointer;
+}
+
+.fa-search:hover{
+  color: white;
+}
 .switch-components {
   margin: auto;
 }
 
-.tone-feed-header, .buttons-two{
+.tone-feed-header{
+  margin: 0px;
+  margin-top: 8px;
+  margin-left: 18px;
+  color: #f50;
+}
+
+.buttons-two{
   display: flex;
   width: 200px;
   margin: 0px;
   padding: 0px;
+  background-color: #333;
+}
+
+.buttons-two > button{
+
+  background-color: #333;
+  border-color:   black;
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+  color: #f50;
+  cursor: pointer;
+}
+
+.buttons-two > button:hover {
+  background-color: white;
+}
+
+.buttons-two:first-child {
+
 }
 

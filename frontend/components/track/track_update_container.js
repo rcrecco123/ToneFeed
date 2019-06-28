@@ -1,6 +1,8 @@
 import { fetchTrack, updateTrack } from '../../actions/tracks_actions';
 import { connect } from 'react-redux';
 import TrackUpdate from './track_update';
+import { withRouter }from "react-router-dom";
+import { closeModal } from '../../actions/modal_actions';
 
 const mapStateToProps = (state) => {
 
@@ -16,9 +18,10 @@ const mapDispatchToProps = (dispatch) => {
 
     return {
         fetchTrack: (id) => dispatch(fetchTrack(id)),
-        updateTrack: (track) => dispatch(updateTrack(track))
+        updateTrack: (track) => dispatch(updateTrack(track)),
+        closeModal: () => dispatch(closeModal())
     }
 
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(TrackUpdate);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(TrackUpdate));

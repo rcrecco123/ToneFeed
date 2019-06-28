@@ -24,7 +24,6 @@
 }
 
 .modal-form {
-
   align-content: center;
   align-self: center;
   align-items: center;
@@ -33,7 +32,6 @@
 }
 
 .modal-form-two {
-
   align-content: center;
   align-self: center;
   align-items: center;
@@ -69,8 +67,6 @@
   font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
   font-size: 14px;
 }
-
-
 
 .signup-button {
   width: 425px;
