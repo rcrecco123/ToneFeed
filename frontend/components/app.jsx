@@ -13,8 +13,10 @@ import UploadContainer from './upload/upload_container';
 import UserShowContainer from './user/user_show_container';
 import Comments from './comment/comments_container.js';
 import TrackUpdate from './track/track_update_container';
-import { AuthRoute,
-        ProtectedRoute } from '../utils/route_utils';
+import {
+    AuthRoute,
+    ProtectedRoute
+} from '../utils/route_utils';
 import {
     Route,
     Switch,
@@ -30,18 +32,18 @@ export default () => (
     //will have to eventually apply my protected routes to pages I dont
     //want users without account to see
     <div className="app-reset">
-        <script type="livereload.js"></script>
-        <Route path='/' component={Modal}/>
-        <Route path='/tracks/:id' component={Modal}/>
+
+        <Route path='/' component={Modal} />
+        <Route path='/tracks/:id' component={Modal} />
         <NavBar />
-            <Switch className="switch-components">
-                <AuthRoute exact path='/' component={props => <SplashContainer {...props}/>} />              
-                <ProtectedRoute path='/feed' component={TracksIndex} />
-                <Route exact path='/tracks/:id' component={TrackShow} />              
-                <ProtectedRoute path='/upload' component={UploadContainer} />              
-                <Route path="/users/:id/" component={TracksIndexFeed} />                
-            </Switch>
-                <Route exact path='/tracks/:id' component={Comments} />
+        <Switch className="switch-components">
+            <AuthRoute exact path='/' component={props => <SplashContainer {...props} />} />
+            <ProtectedRoute path='/feed' component={TracksIndex} />
+            <Route exact path='/tracks/:id' component={TrackShow} />
+            <ProtectedRoute path='/upload' component={UploadContainer} />
+            <Route path="/users/:id/" component={TracksIndexFeed} />
+        </Switch>
+        <Route exact path='/tracks/:id' component={Comments} />
         <Footer />
     </div>
 )
@@ -49,6 +51,6 @@ export default () => (
 
 
 
-{/* <ProtectedRoute exact path='/users/:userId' component={TracksIndex} />   */}
-                {/* <ProtectedRoute path='/users/:userId' component={UserShowContainer} /> */}
-                {/* <ProtectedRoute path='/users/:userId' component={UserShowContainer} /> */}
+{/* <ProtectedRoute exact path='/users/:userId' component={TracksIndex} />   */ }
+{/* <ProtectedRoute path='/users/:userId' component={UserShowContainer} /> */ }
+{/* <ProtectedRoute path='/users/:userId' component={UserShowContainer} /> */ }

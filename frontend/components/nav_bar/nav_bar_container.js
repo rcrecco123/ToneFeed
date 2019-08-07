@@ -4,11 +4,11 @@ import NavBar from './nav_bar';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = ({ session, entities: {users} }) => {
+const mapStateToProps = ({ session, entities: { users } }) => {
     debugger
     return {
         currentUserId: session.currentUser,
-        currentUser: users[session.currentUser]
+        currentUser: session.currentUser
     }
 };
 

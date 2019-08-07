@@ -5,7 +5,7 @@ class Upload extends React.Component {
 
     constructor(props) {
         super(props);
-        
+
         console.log(props.currentUser);
         this.state = {
             track: null,
@@ -13,6 +13,7 @@ class Upload extends React.Component {
             image: null,
             imageUrl: null,
             title: "",
+            loading: false
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -28,7 +29,7 @@ class Upload extends React.Component {
     };
 
     handleFile(e) {
-        
+
         const file = e.currentTarget.files[0];
         const fileReader = new FileReader();
         fileReader.onloadend = () => {
@@ -40,7 +41,7 @@ class Upload extends React.Component {
     }
 
     handleFileImg(e) {
-        
+
         const fileTwo = e.currentTarget.files[0];
         const fileReaderTwo = new FileReader();
         fileReaderTwo.onloadend = () => {
@@ -55,12 +56,12 @@ class Upload extends React.Component {
 
         e.preventDefault();
         const formData = new FormData();
-        
+
         formData.append('track[title]', this.state.title);
         formData.append('track[track]', this.state.track);
         formData.append('track[image]', this.state.image);
         formData.append('track[user_id]', this.props.currentUser);
-        
+
         this.props.uploadTrack(formData)
             .then(() => this.props.history.push(`/feed`));
 
@@ -68,17 +69,18 @@ class Upload extends React.Component {
 
     render() {
 
-        
-        return (
-        <div className="upload-form-div">
-            <div className="overflow-upload"></div>
-            
-            <div >
-                <h2 className="click-to-upload">Click to start uploading tones</h2>
-            </div>
 
-            <form className="upload-form" onSubmit={this.handleSubmit.bind(this)}>
-                    
+        return (
+
+            <div className="upload-form-div">
+                <div className="overflow-upload"></div>
+
+                <div >
+                    <h2 className="click-to-upload">Click to start uploading tones</h2>
+                </div>
+
+                <form className="upload-form" onSubmit={this.handleSubmit.bind(this)}>
+
                     <label className="custom-file-upload">
                         <input type="file" onChange={this.handleFile.bind(this)} />
                         <i className="fa fa-cloud-upload"></i> Choose a track to upload
@@ -88,17 +90,18 @@ class Upload extends React.Component {
                         <input type="file" onChange={this.handleFileImg.bind(this)} />
                         <i className="fa fa-cloud-upload"></i> Choose an image to upload
                     </label>
-                    <br/>
-                    <br/>
-                    <br/>
+                    <br />
+                    <br />
+                    <br />
                     <label className="track-title">Track Title: &nbsp;
                         <input type="text" value={this.state.trackTitle} placeholder="Title" onChange={this.handleInput('title')} />
                     </label>
-                    <br/>
-                    <input className="sub-button" type="submit" value="SUBMIT" onChange={this.handleSubmit.bind(this)}/>
-            </form>
-        </div>
+                    <br />
+                    <input className="sub-button" type="submit" value="SUBMIT" onChange={this.handleSubmit.bind(this)} />
+                </form>
+            </div>
         )
+
     }
 
 }

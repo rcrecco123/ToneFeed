@@ -29,27 +29,29 @@ const NavBar = ({ currentUser, logout, openModal, history }) => {
     }
 
     const loggedInBar = () => (
-        
-            <nav className="topnav">
 
-                <h2 className="tone-feed-header">
-                    ToneFeed
+        <nav className="topnav">
+
+            <h2 className="tone-feed-header">
+                ToneFeed
                 </h2>
 
-                <div>
-                    <i className="fas fa-search"></i>
-                    <input className="nav-bar-search-bar" type="text" value="Enter artist, song, album, or genre!"/>
-                </div>
+            <div>
+                <i className="fas fa-search"></i>
+                <input className="nav-bar-search-bar" type="text" value="Enter artist, song, album, or genre!" />
+            </div>
 
-                <div className='buttons-two'>
-                    <button className="logout-button-nav" onClick={handleLogoutClick}>Sign Out</ button>
-                    <button className="a" onClick={handleUsernameButton}>{currentUser.username}</button>
-                    <button className="upload-button-nav" onClick={handleUploadClick}>Upload</button>
-                </div>
+            <div className='buttons-two'>
+                <button className="logout-button-nav" onClick={handleLogoutClick}>Sign Out</ button>
+                <button className="a" onClick={handleUsernameButton}>{currentUser.username}</button>
+                <button className="upload-button-nav" onClick={handleUploadClick}>Upload</button>
+            </div>
 
-            </nav>
-  
+        </nav>
+
     );
+
+    debugger
 
     return currentUser ? loggedInBar() : null;
 
