@@ -10,8 +10,9 @@ export const openModal = modal => {
     };
 };
 
-export const closeModal = modal => {
+export const closeModal = () => {
     return {
-        type: CLOSE_MODAL
+        type: CLOSE_MODAL,
+
     };
 };

@@ -11,8 +11,9 @@ class Splash extends React.Component {
     };
 
     handleDemo() {
-        this.props.demo({email: 'docdoom815@gmail.com', password:'funfunfun1'})
-            .then(() => { debugger
+        this.props.demo({ email: 'docdoom815@gmail.com', password: 'funfunfun1' })
+            .then(() => {
+                debugger
                 this.props.history.push("/feed")
                 debugger
             });
@@ -21,8 +22,11 @@ class Splash extends React.Component {
     componentDidMount() {
 
     }
-    
+
+
+
     render() {
+
 
         return (
             <div>
@@ -52,27 +56,33 @@ class Splash extends React.Component {
                         </li>
                     </ul>
                 </div>
-                {/* <div className="splash-thumbnails-one">
-                    <div></div>
-                    <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
-                    <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
-                    <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
-                    <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
-                    <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
-                    <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
-                    <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
-                    <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
-                    <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
-                    <img className="pokemon-pic" src="https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png"/>
-                </div> */}
-                <TrackSplash getRandomTracks={this.props.getRandomTracks} />
+                <div className="splash-thumbnails-one">
+
+
+
+                    {/* <div className="pokemon-pic"></div> */}
+                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
+
+                    {/* https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png */}
+
+                </div>
+                {/* <TrackSplash getRandomTracks={this.props.getRandomTracks} /> */}
                 <div className='splash-banner'>
                     <img src='https://a-v2.sndcdn.com/assets/images/home/hp_creator_image-e08dee4.jpg'></img>
                     <div className='banner-text'>
                         <h2>Thanks for listening. Now join in.</h2>
                         <p>Listen, upload, and share music with the world.</p>
                         <button className="login-button bottom-button" onClick={() => this.props.openModal('signup')}>Create account</button>
-                        <br/>
+                        <br />
                         <div className='inline-banner'>
                             <p className='inline-banner-text'>Already have an account?</p> <button className="signin-button bottom-button" onClick={() => this.props.openModal('login')}>Sign in</button>
                         </div>

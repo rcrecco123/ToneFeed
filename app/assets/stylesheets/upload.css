@@ -1,36 +1,31 @@
 
-/* 
+
 .upload-form {
-    margin-left: -100px;
-    width: 1240px;
-    height: 70px;
+    margin: 0 auto;
+    /* width: 1240px;
+    height: 70px;    */
+}
+
+.upload-form-div {
+    margin: 0;
+
 }
 
 
 .overflow-upload {
     margin-top: 50px;
-}
-
-.overflow-upload {
-    position: relative;
-    width: 1240px;
-    height: 15px;
-    background-color: rgb(255, 255, 255);
-    
-    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
-} */
+    display: inline-block;
+}  
 
 .track-title {
     padding-top: 100px;
     margin-top: 100px;
     margin-bottom: 100px;
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
-    margin-left: 567px;
+ 
 }
 
 .click-to-upload {
-    margin-top: 100px;
-    margin-left: -110px;
     display: flex;
     justify-content: space-around;
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
@@ -58,8 +53,6 @@
     border-color: #f50;
     border-radius: 3px;
     font-size: 20px;
-    margin-left: 545px;
-    /* margin: auto; */
     font-weight: 100;
 }
 
@@ -81,12 +74,8 @@ input[type="file"] {
     border-color: #f50;
     border-radius: 3px;
     font-size: 20px;
-    margin-left: 640px;
-    /* margin: auto; */
     font-weight: 100;
     padding: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
     margin-top: 35px;
     cursor: pointer;
 

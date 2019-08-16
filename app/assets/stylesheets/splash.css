@@ -198,7 +198,7 @@ body {
       display: flex;
       position: relative;
       margin-left: -50px;
-      margin-top: 200px;
+      
       
 }
 
@@ -283,13 +283,19 @@ body {
 
 .splash-thunmnails-one {
     display: grid;
-    grid-gap: 50px 100px;
+    grid-gap: 75px 150px;
+    margin-bottom: -25px;
 }
 
 .pokemon-pic {
-    height: 180px;
-    width: 180px;
+    height: 190px;
+    width: 190px;
     border: 1px solid;
     border-color: rgb(192, 192, 192);
     margin: 20px;
+    /* background: url("https://i.imgur.com/CjiawSY.jpg") no-repeat; */
 }
+
+/* .pokemon-pic:hover {
+    background: url("https://i.imgur.com/qaSO1hP.jpg") no-repeat;
+} */

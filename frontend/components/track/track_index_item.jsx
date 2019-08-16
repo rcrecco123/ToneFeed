@@ -13,6 +13,7 @@ class TrackIndexItem extends React.Component {
         this.playClick = this.playClick.bind(this);
         this.handlePlayToggle = this.handlePlayToggle.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.likeButtonClick = this.likeButtonClick.bind(this);
     }
 
 
@@ -35,8 +36,8 @@ class TrackIndexItem extends React.Component {
                 hideScrollbar: true,
                 cursorColor: 'transparent'
             })
-        }) 
-        
+        })
+
         // this.state.ws.load(this.props.track.fileUrl);
     }
 
@@ -50,13 +51,20 @@ class TrackIndexItem extends React.Component {
         const newClassName = oldStyle === "fas fa-play-circle" ? "fas fa-pause-circle" : "fas fa-play-circle"
         document.getElementById(`index-play${this.props.track.id}`).className = newClassName
     }
- 
+
     handleDelete() {
         this.props.deleteTrack(this.props.track.id);
     }
 
+    likeButtonClick() {
+        debugger
+        const likeButton = document.getElementById(`likeButton${this.props.track.id}`);
+        likeButton.setAttribute('color', "#f50");
+    }
+
     render() {
         //debugger
+
 
         if (this.state.ws) {
             this.state.ws.load(this.props.track.fileUrl)
@@ -92,7 +100,7 @@ class TrackIndexItem extends React.Component {
                     <div className="circle-play-index" >
                         <i id={`index-play${this.props.track.id}`} className="fas fa-play-circle" onClick={this.playClick}></i>
                         {/* <i className="fas fa-pause-circle"></i> */}
-                        
+
                     </div>
 
                 </div>
@@ -100,9 +108,9 @@ class TrackIndexItem extends React.Component {
 
 
                 <div className="track-index-item-waveform" id={`waveform${this.props.track.id}`}></div>
-                
+
                 <div className="font-awesome-track-index">
-                    <i className="far fa-thumbs-up"></i>
+                    <i className="far fa-thumbs-up" onClick={() => this.likeButtonClick} id={`likeButton${this.props.track.id}`} ></i>
                     <i className="fas fa-retweet"></i>
                     <i className="far fa-trash-alt" onClick={this.handleDelete.bind(this)}></i>
                 </div>

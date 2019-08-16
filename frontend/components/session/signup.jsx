@@ -4,11 +4,11 @@ import { withRouter } from 'react-router-dom';
 //FORM COMPONENT
 
 class Signup extends React.Component {
-    
+
     //create a local state to keep track of all
     // of the fields for form were building
 
-    constructor(props){
+    constructor(props) {
         super(props);
 
         this.state = {
@@ -51,30 +51,36 @@ class Signup extends React.Component {
         };
     };
     //takes in an event
-    
-    push() {
-        this.props.history.push('/feed');
-        this.props.closeModal();
+
+    // push() {
+    //     this.props.history.push('/feed');
+    //     this.props.closeModal();
+    // }
+
+    handle() {
+
+        // this.props.history.push('/feed');
     }
+
 
     handleSubmit(e) {
-        
+
         //prevents default 'POST'
         e.preventDefault();
-            this.props.createNewUser(this.state)
-                .then(this.props.closeModal());
+        this.props.createNewUser()
+            .then(this.handle());
     }
 
-    render () {
+    render() {
 
         return (
             <div className="session-form">
-            <h2 className='form-head'>Sign Up</h2>
+                <h2 className='form-head'>Sign Up</h2>
                 <div className="modal-form">
                     <form className="modal-form-two">
                         <label className='modal-label'>Username:
                             <input
-                                className="modal-text-box" 
+                                className="modal-text-box"
                                 type="text"
                                 placeholder="Username"
                                 value={this.state.username}
@@ -86,7 +92,7 @@ class Signup extends React.Component {
                         </label >
                         <label className='modal-label'>Email:
                             <input
-                                className="modal-text-box" 
+                                className="modal-text-box"
                                 type="text"
                                 placeholder="Email"
                                 value={this.state.email}
@@ -97,7 +103,7 @@ class Signup extends React.Component {
                             </div>
                         </label>
                         <label className='modal-label'>Password:
-                            <input 
+                            <input
                                 className="modal-text-box"
                                 type="password"
                                 placeholder="Password"
@@ -110,7 +116,7 @@ class Signup extends React.Component {
                         </label>
 
                         <button
-                            className="signup-button" 
+                            className="signup-button"
                             onClick={this.handleSubmit}>Sign Up</button>
                         <p className='note'>
                             We may use your email and devices for updates and tips on ToneFeed's products and services, and for activities notifications. You can unsubscribe for free at any time in your notification settings.

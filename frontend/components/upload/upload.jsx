@@ -75,7 +75,7 @@ class Upload extends React.Component {
             <div className="upload-form-div">
                 <div className="overflow-upload"></div>
 
-                <div >
+                <div>
                     <h2 className="click-to-upload">Click to start uploading tones</h2>
                 </div>
 

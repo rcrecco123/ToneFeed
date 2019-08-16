@@ -14,6 +14,8 @@ import { withRouter } from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout, openModal, history }) => {
 
+    debugger
+
     function handleLogoutClick() {
         logout();
         history.push('/')
