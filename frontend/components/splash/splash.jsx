@@ -13,9 +13,9 @@ class Splash extends React.Component {
     handleDemo() {
         this.props.demo({ email: 'docdoom815@gmail.com', password: 'funfunfun1' })
             .then(() => {
-                debugger
+                // debugger
                 this.props.history.push("/feed")
-                debugger
+                // debugger
             });
     };
 

@@ -12,7 +12,7 @@ import { withRouter } from 'react-router-dom';
 //     }
 // };
 const mapStateToProps = (state) => {
-    debugger
+    // debugger
     return {
         // currentUserId: session.currentUser,
         currentUser: state.entities.users[state.session.currentUser],
@@ -21,7 +21,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => {
-    debugger
+    // debugger
     return {
         closeModal: () => dispatch(closeModal()),
         logout: () => dispatch(logout()),

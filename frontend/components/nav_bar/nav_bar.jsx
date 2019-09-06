@@ -14,7 +14,7 @@ import { withRouter } from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout, openModal, history }) => {
 
-    debugger
+    // debugger
 
     function handleLogoutClick() {
         logout();
@@ -53,7 +53,7 @@ const NavBar = ({ currentUser, logout, openModal, history }) => {
 
     );
 
-    debugger
+    // debugger
 
     return currentUser ? loggedInBar() : null;
 

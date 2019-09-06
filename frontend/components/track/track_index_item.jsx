@@ -110,7 +110,9 @@ class TrackIndexItem extends React.Component {
                 <div className="track-index-item-waveform" id={`waveform${this.props.track.id}`}></div>
 
                 <div className="font-awesome-track-index">
-                    <i className="far fa-thumbs-up" onClick={() => this.likeButtonClick} id={`likeButton${this.props.track.id}`} ></i>
+                    <button onClick={this.likeButtonClick} >
+                        <i className="far fa-thumbs-up" id={`likeButton${this.props.track.id}`} ></i>
+                    </button>
                     <i className="fas fa-retweet"></i>
                     <i className="far fa-trash-alt" onClick={this.handleDelete.bind(this)}></i>
                 </div>

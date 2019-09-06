@@ -5,7 +5,7 @@ export const RECEIVE_COMMENT = "RECEIVE_COMMENT";
 export const DELETE_COMMENT = "DELETE_COMMENT";
 
 export const receiveComment = comment => {
-    
+
     return {
         type: RECEIVE_COMMENT,
         comment
@@ -39,9 +39,10 @@ export const destroyComment = comment => dispatch => {
     return (
         CommentsUtil.destroyComment(comment)
             .then((comment) => {
-            //debugger
-            dispatch(deleteComment(comment))
+                //debugger
+                dispatch(deleteComment(comment))
             }
-        ))
+            ))
 }
+
 
