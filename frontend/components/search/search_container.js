@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        searchTracks: tracks => dispatch(searchTracks(tracks))
+        searchTracks: searchString => dispatch(searchTracks(searchString))
     }
 }
 

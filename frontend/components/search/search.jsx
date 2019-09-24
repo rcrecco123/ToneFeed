@@ -36,11 +36,11 @@ class Search extends React.Component {
 
         return (
             <div>
-                <ul>
+                {/* <ul>
                     {this.props.tracks.map(track => {
                         return <li>{track.title}</li>
                     })}
-                </ul>
+                </ul> */}
                 <div>
                     <i className="fas fa-search" ></i>
                     <input className="nav-bar-search-bar" onChange={this.handleChange} />
