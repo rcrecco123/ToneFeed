@@ -54,7 +54,7 @@ class Api::TracksController < ApplicationController
 
     def search
        
-        @tracks = Track.where('description LIKE :search OR name LIKE :search', search: "%#{params[:search]}%")
+        @tracks = Track.where('description LIKE :search OR name LIKE :search', search: "")
         
         if @tracks
             render "api/tracks/search"

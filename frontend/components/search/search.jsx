@@ -22,7 +22,11 @@ class Search extends React.Component {
     }
 
     componentDidUpdate() {
-        this.props.searchTracks(this.state.search);
+
+    }
+
+    submitSearch() {
+        this.props.search(this.state.search.toString());
     }
 
     render() {
@@ -42,7 +46,7 @@ class Search extends React.Component {
                     })}
                 </ul> */}
                 <div>
-                    <button className="fas fa-search" onClick={this.props.search(this.state.search)}></button>
+                    <button className="fas fa-search" onClick={this.props.search}></button>
                     <input className="nav-bar-search-bar" onChange={this.handleChange} />
 
                 </div>
