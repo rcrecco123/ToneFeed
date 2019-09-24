@@ -9,10 +9,10 @@ const mapStateToProps = (state) => {
 
     }
 }
-
+ß
 const mapDispatchToProps = (dispatch) => {
     return {
-        searchTracks: searchString => dispatch(searchTracks(searchString))
+        search: searchString => dispatch(searchTracks(searchString))
     }
 }
 

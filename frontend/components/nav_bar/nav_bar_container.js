@@ -3,6 +3,7 @@ import { logout } from '../../actions/session_actions';
 import NavBar from './nav_bar';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
+import { searchTracks } from "../../actions/tracks_actions";
 
 // const mapStateToProps = ({ session, entities: { users } }) => {
 //     debugger
@@ -25,7 +26,8 @@ const mapDispatchToProps = dispatch => {
     return {
         closeModal: () => dispatch(closeModal()),
         logout: () => dispatch(logout()),
-        openModal: (modal) => dispatch(openModal(modal))
+        openModal: (modal) => dispatch(openModal(modal)),
+        search: searchString => dispatch(searchTracks(searchString))
     }
 };
 

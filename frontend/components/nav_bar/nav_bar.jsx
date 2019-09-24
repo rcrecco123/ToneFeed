@@ -13,7 +13,7 @@ import Search from "../search/search";
 
 //WRITE THE "CONDITIONAL" UPLOAD PARTS IN A SEPERATE CONTAINER
 
-const NavBar = ({ currentUser, logout, openModal, history }) => {
+const NavBar = ({ currentUser, logout, openModal, history, search }) => {
 
     // debugger
 
@@ -42,7 +42,7 @@ const NavBar = ({ currentUser, logout, openModal, history }) => {
             <div>
                 {/* <i className="fas fa-search"></i>
                 <input className="nav-bar-search-bar" type="text" value="Enter artist, song, album, or genre!" /> */}
-                <Search />
+                <Search search={search} />
             </div>
 
             <div className='buttons-two'>

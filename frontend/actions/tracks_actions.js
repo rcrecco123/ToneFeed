@@ -5,6 +5,7 @@ export const RECEIVE_TRACK = "RECEIVE_TRACK";
 export const REMOVE_TRACK = "REMOVE_TRACK";
 export const RECEIVE_DISCOVER = "RECEIVE_DISCOVER";
 export const RECEIVE_SEARCH_TRACKS = "RECEIVE_SEARCH_TRACKS";
+export const SEARCH_TRACKS = "SEARCH_TRACKS";
 
 export const receiveTracks = tracks => {
 

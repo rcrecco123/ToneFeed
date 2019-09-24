@@ -53,7 +53,7 @@ class Api::TracksController < ApplicationController
     # end
 
     def search
-        debugger
+       
         @tracks = Track.where('description LIKE :search OR name LIKE :search', search: "%#{params[:search]}%")
         
         if @tracks
