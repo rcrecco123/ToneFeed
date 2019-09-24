@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import Search from "../search/search";
 
 
 
@@ -39,8 +40,9 @@ const NavBar = ({ currentUser, logout, openModal, history }) => {
                 </h2>
 
             <div>
-                <i className="fas fa-search"></i>
-                <input className="nav-bar-search-bar" type="text" value="Enter artist, song, album, or genre!" />
+                {/* <i className="fas fa-search"></i>
+                <input className="nav-bar-search-bar" type="text" value="Enter artist, song, album, or genre!" /> */}
+                <Search />
             </div>
 
             <div className='buttons-two'>

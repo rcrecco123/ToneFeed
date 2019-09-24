@@ -4,9 +4,10 @@ export const RECEIVE_TRACKS = "RECEIVE_TRACKS";
 export const RECEIVE_TRACK = "RECEIVE_TRACK";
 export const REMOVE_TRACK = "REMOVE_TRACK";
 export const RECEIVE_DISCOVER = "RECEIVE_DISCOVER";
+export const RECEIVE_SEARCH_TRACKS = "RECEIVE_SEARCH_TRACKS";
 
 export const receiveTracks = tracks => {
-    
+
     return {
         type: RECEIVE_TRACKS,
         tracks
@@ -14,15 +15,22 @@ export const receiveTracks = tracks => {
 }
 
 export const receiveTrack = track => {
-    
+
     return {
         type: RECEIVE_TRACK,
         track
     }
 }
 
+export const receiveSearchTracks = tracks => {
+    return {
+        type: RECEIVE_SEARCH_TRACKS,
+        tracks
+    }
+}
+
 export const receiveDiscover = tracks => {
-    
+
     return {
         type: RECEIVE_DISCOVER,
         tracks
@@ -59,7 +67,7 @@ export const fetchDiscover = () => dispatch => {
 }
 
 export const deleteTrack = id => dispatch => {
-    
+
     return (
         TracksUtil.deleteTrack(id)
             .then(() => dispatch(removeTrack(id)))
@@ -81,10 +89,17 @@ export const uploadTrack = formData => dispatch => {
 }
 
 export const getRandomTracks = () => dispatch => {
-    
+
     return (
         TracksUtil.getRandomTracks()
             .then(tracks => dispatch(receiveDiscover(tracks)))
+    )
+}
+
+export const searchTracks = (search) => dispatch => {
+    return (
+        TracksUtil.searchTracks(search)
+            .then(tracks => dispatch(receiveSearchTracks(tracks)))
     )
 }
 

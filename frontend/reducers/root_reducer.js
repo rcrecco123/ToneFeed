@@ -3,6 +3,7 @@ import ui from './ui_reducer';
 import session from './session_reducer';
 import entities from "./entities_reducer";
 import errors from './errors_reducer';
+import search from "./search_reducer";
 
 //MY STATE
 
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
     session,
     ui,
     errors,
+    search
 })
 
 export default rootReducer;

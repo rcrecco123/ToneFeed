@@ -52,6 +52,15 @@ class Api::TracksController < ApplicationController
 
     # end
 
+    def search
+        debugger
+        @tracks = Track.where('description LIKE :search OR name LIKE :search', search: "%#{params[:search]}%")
+        
+        if @tracks
+            render "api/tracks/search"
+        end
+    end
+
 
     def track_params
         params.require(:track).permit(:id, :title, :track, :user_id, :image)

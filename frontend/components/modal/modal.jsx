@@ -34,19 +34,18 @@ function Modal({ modal, closeModal }) {
         </div>
     );
 };
-        const MapStateToProps = state => {
-            return {
-                modal: state.ui.modal
-            };
-        };
-    
-        const MapDispatchToProps = dispatch => {
-            return {
-                closeModal: () => dispatch(closeModal())
-            };
-        };
+const MapStateToProps = state => {
+    return {
+        modal: state.ui.modal
+    };
+};
+
+const MapDispatchToProps = dispatch => {
+    return {
+        closeModal: () => dispatch(closeModal())
+    };
+};
 
 export default withRouter(connect(MapStateToProps, MapDispatchToProps)(Modal));
 
 
-    

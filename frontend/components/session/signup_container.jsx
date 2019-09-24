@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createNewUser} from '../../actions/session_actions';
+import { createNewUser } from '../../actions/session_actions';
 import { openModal, closeModal } from '../../actions/modal_actions';
 import Signup from './signup';
 import React from 'react';
@@ -28,6 +28,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => {
+    debugger
     return {
         createNewUser: formUser => dispatch(createNewUser(formUser)),
         processForm: (user) => dispatch(login(user)),

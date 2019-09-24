@@ -23,10 +23,7 @@ class Splash extends React.Component {
 
     }
 
-
-
     render() {
-
 
         return (
             <div>
@@ -71,8 +68,6 @@ class Splash extends React.Component {
                     <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
                     <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
                     <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
-
-                    {/* https://cdn.vox-cdn.com/thumbor/3ajecDMOIH59cbOeyO0bap_4wj4=/0x0:2257x1320/1200x800/filters:focal(949x480:1309x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63738986/pokemon.0.0.png */}
 
                 </div>
                 {/* <TrackSplash getRandomTracks={this.props.getRandomTracks} /> */}

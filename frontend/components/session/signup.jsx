@@ -8,6 +8,7 @@ class Signup extends React.Component {
     //create a local state to keep track of all
     // of the fields for form were building
 
+
     constructor(props) {
         super(props);
 
@@ -16,6 +17,8 @@ class Signup extends React.Component {
             email: '',
             password: '',
         }
+
+        debugger
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.push = this.push.bind(this);
@@ -52,10 +55,7 @@ class Signup extends React.Component {
     };
     //takes in an event
 
-    // push() {
-    //     this.props.history.push('/feed');
-    //     this.props.closeModal();
-    // }
+
 
     handle() {
 
@@ -68,7 +68,6 @@ class Signup extends React.Component {
         //prevents default 'POST'
         e.preventDefault();
         this.props.createNewUser()
-            .then(this.handle());
     }
 
     render() {

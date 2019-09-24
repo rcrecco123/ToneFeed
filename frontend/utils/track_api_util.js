@@ -4,7 +4,6 @@ export const fetchTracks = () => {
     return $.ajax({
         method: 'GET',
         url: '/api/tracks',
-        
     })
 };
 
@@ -14,7 +13,6 @@ export const fetchTrack = (id) => {
         url: `/api/tracks/${id}`
     })
 };
-
 export const deleteTrack = (id) => {
     return $.ajax({
         method: 'DELETE',
@@ -40,9 +38,17 @@ export const uploadTrack = formData => {
 }
 
 export const getRandomTracks = () => {
-    
+
     return $.ajax({
         method: "GET",
         url: "/api/tracks/discover"
+    })
+}
+
+export const searchTracks = (search) => {
+    return $.ajax({
+        method: "GET",
+        url: "/api/tracks/search",
+        data: search
     })
 }
