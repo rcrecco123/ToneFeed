@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import Search from "../search/search";
+import Search from "../search/search_container";
 
 
 

@@ -49,6 +49,5 @@ export const searchTracks = (search) => {
     return $.ajax({
         method: "GET",
         url: "/api/tracks/search",
-        data: search
     })
 }
