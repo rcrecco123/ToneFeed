@@ -53,11 +53,11 @@ class Api::TracksController < ApplicationController
     # end
 
     def search
-       
-        @tracks = Track.where('description LIKE :search OR name LIKE :search', search: "")
+       debugger
+        @tracks = Track.where('title LIKE :search', search: "") #GET THAT FROM PARAMS params[:search].to_s
         
         if @tracks
-            render "api/tracks/search"
+            render "api/tracks/:id/search"
         end
     end
 

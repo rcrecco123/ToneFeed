@@ -1,10 +1,10 @@
 import { RECEIVE_SEARCH_TRACKS } from "../actions/tracks_actions";
 
-export default function searchReducer(state = null, action) {
+export default function searchReducer(oldState = {}, action) {
     switch (action.type) {
         case RECEIVE_SEARCH_TRACKS:
-            return action.tracks;
+            return Object.assign({}, oldState, action.tracks);
         default:
-            return state;
+            return oldState;
     }
 }

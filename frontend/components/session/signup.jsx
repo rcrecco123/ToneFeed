@@ -18,7 +18,7 @@ class Signup extends React.Component {
             password: '',
         }
 
-        debugger
+        // debugger
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.push = this.push.bind(this);

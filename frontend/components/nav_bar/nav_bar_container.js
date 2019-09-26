@@ -27,7 +27,7 @@ const mapDispatchToProps = dispatch => {
         closeModal: () => dispatch(closeModal()),
         logout: () => dispatch(logout()),
         openModal: (modal) => dispatch(openModal(modal)),
-        search: searchString => dispatch(searchTracks(searchString))
+        search: (searchString) => dispatch(searchTracks(searchString))
     }
 };
 
