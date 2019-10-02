@@ -46,9 +46,10 @@ export const getRandomTracks = () => {
 }
 
 export const searchTracks = (search) => {
-    // debugger
+    debugger
     return $.ajax({
         method: "GET",
-        url: `/api/tracks/search`,
+        url: `/api/tracks/:id/search`,
+        payload: search
     })
 }

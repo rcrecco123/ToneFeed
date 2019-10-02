@@ -1,4 +1,5 @@
 @tracks.each do |track|
+    debugger
     json.set! track.id do
         json.extract! track, :id, :title, :user_id
         json.username track.user.username

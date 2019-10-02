@@ -14,7 +14,7 @@ class Api::SessionsController < ApplicationController
         end 
     end
 
-    def destroy
+    def destroy 
         # debugger
         @user = current_user
 

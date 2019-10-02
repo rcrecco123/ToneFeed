@@ -13,7 +13,9 @@ class Api::TracksController < ApplicationController
     
     def show
         @track = Track.find(params[:id])
-        render "api/tracks/show"
+        if @track
+            render "api/tracks/show"
+        end
     end
 
     def index
@@ -53,12 +55,15 @@ class Api::TracksController < ApplicationController
     # end
 
     def search
+
        debugger
-        @tracks = Track.where('title LIKE :search', search: "") #GET THAT FROM PARAMS params[:search].to_s
+       
+        @tracks = Track.where('title: ["Water World"]') #GET THAT FROM PARAMS params[:search].to_s
         
         if @tracks
-            render "api/tracks/:id/search"
+            render "api/tracks/search"
         end
+
     end
 
 
