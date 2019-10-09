@@ -7,7 +7,7 @@ class Search extends React.Component {
         super(props)
 
         this.state = {
-            searchString: ""
+            searchString: "water"
         }
         // debugger
         this.handleChange = this.handleChange.bind(this);
@@ -18,7 +18,7 @@ class Search extends React.Component {
     handleChange(e) {
 
         this.setState({
-            search: e.target.value
+            searchString: e.target.value
         })
 
     }
@@ -28,12 +28,11 @@ class Search extends React.Component {
     }
 
     submitSearch() {
-        // debugger
-        this.props.search(this.state.search.toString());
+
     }
 
     render() {
-
+        debugger
         // let filteredTracks = this.props.tracks.filter(
         //     track => {
         //         return track.name.toLowerCase()
@@ -50,7 +49,7 @@ class Search extends React.Component {
                 </ul> */}
                 <div>
                     <button className="fas fa-search" onClick={() => { this.props.search(this.state.searchString) }}></button>
-                    <input className="nav-bar-search-bar" onChange={this.handleChange} />
+                    <input className="nav-bar-search-bar" onChange={this.handleChange} name="search" />
 
                 </div>
             </div>

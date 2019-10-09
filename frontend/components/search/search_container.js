@@ -5,9 +5,7 @@ import { withRouter } from "react-router-dom";
 import { searchTracks } from "../../actions/tracks_actions";
 
 const mapStateToProps = (state) => {
-    return {
 
-    }
 }
 
 const mapDispatchToProps = (dispatch) => {

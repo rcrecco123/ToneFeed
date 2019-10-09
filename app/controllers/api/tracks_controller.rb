@@ -44,21 +44,17 @@ class Api::TracksController < ApplicationController
         end
     end
 
-    # def update
-    #     @track = Track.find(params[:id])
-
-    #     if @track.update_attributes(track_params)
-    #         @track.save
-    #         render '/api/tracks/:id'
-    #     else
-
-    # end
-
     def search
 
-       debugger
+        debugger
        
-        @tracks = Track.where('title: ["Water World"]') #GET THAT FROM PARAMS params[:search].to_s
+        @params = params
+
+        @search_string = params[:search]
+
+        search = params[:search]
+
+        @tracks = Track.where("title LIKE ?", "%#{search}%") #GET THAT FROM PARAMS params[:search].to_s
         
         if @tracks
             render "api/tracks/search"
