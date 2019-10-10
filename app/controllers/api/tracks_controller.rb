@@ -52,10 +52,14 @@ class Api::TracksController < ApplicationController
 
         @search_string = params[:search]
 
-        search = params[:search]
+        debugger
 
-        @tracks = Track.where("title LIKE ?", "%#{search}%") #GET THAT FROM PARAMS params[:search].to_s
+        search = params[:search].downcase
+
+        @tracks = Track.where("title LIKE ?", "#{search}") #GET THAT FROM PARAMS params[:search].to_s
         
+        debugger
+
         if @tracks
             render "api/tracks/search"
         end

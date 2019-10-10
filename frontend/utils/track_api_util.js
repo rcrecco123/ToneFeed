@@ -50,7 +50,7 @@ export const searchTracks = (search) => {
     return $.ajax({
         method: "GET",
         url: `/api/tracks/:id/search`,
-        data: search,
+        data: { search },
     })
 
     //  {search} is passed to params by giving a key of data: pointing to search in our AJAX request.

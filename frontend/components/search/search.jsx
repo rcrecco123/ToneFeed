@@ -7,7 +7,7 @@ class Search extends React.Component {
         super(props)
 
         this.state = {
-            searchString: "water"
+            searchString: ""
         }
         // debugger
         this.handleChange = this.handleChange.bind(this);
@@ -33,20 +33,27 @@ class Search extends React.Component {
 
     render() {
         debugger
-        // let filteredTracks = this.props.tracks.filter(
-        //     track => {
-        //         return track.name.toLowerCase()
-        //             .indexOf(this.state.search.toLowerCase()) !== -1;
-        //     }
-        // );
+        if (this.props.allTracks != undefined) {
+
+            let trackArr = Object.values(this.props.allTracks)
+            debugger
+            let filteredTracks = this.props.trackArr.filter(
+                track => {
+                    return track.name.toLowerCase()
+                        .indexOf(this.state.search.toLowerCase()) !== -1;
+                }
+            );
+
+        }
+
 
         return (
             <div>
-                {/* <ul>
-                    {this.props.tracks.map(track => {
+                <ul>
+                    {filteredTracks.map(track => {
                         return <li>{track.title}</li>
                     })}
-                </ul> */}
+                </ul>
                 <div>
                     <button className="fas fa-search" onClick={() => { this.props.search(this.state.searchString) }}></button>
                     <input className="nav-bar-search-bar" onChange={this.handleChange} name="search" />
