@@ -1,4 +1,4 @@
-.root {
+/* .root {
 
     margin: 0px auto;
     background-color: rgba(223, 223, 223, 0.603);
@@ -6,27 +6,27 @@
     display: flex;
     margin-top: 70px;
 
-}
-
+} */
+/* 
 .root-two {
 display: flex;
-}
+} */
 
-.master-html{
+/* .master-html{
     margin: -10px;
     padding: 0px;
     background-color: black;
     display: block;
 
-}
+} */
 
-.app-reset{
+/* .app-reset{
 display: block;
 margin:0px;
 padding:0px;
 position: relative;
-}
+} */
 
-.fa-thumbs-up:active{
+/* .fa-thumbs-up:active{
   color: #f50;
-}
+} */

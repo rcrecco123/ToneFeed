@@ -47,6 +47,7 @@ class Search extends React.Component {
         // }
 
 
+
         return (
             <div>
                 <div>
@@ -57,7 +58,8 @@ class Search extends React.Component {
                 <ul className="search-list">
                     {Object.values(this.props.allTracks).map(track => {
                         if (track.title.includes(`${this.state.searchString}`)) {
-                            return <li key={`${track.title.toString()}`}>{track.title}</li>
+                            return <li key={`${track.title.toString()}`
+                            }>{track.title}</li>
                         }
                     })}
                 </ul>

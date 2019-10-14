@@ -1,10 +1,17 @@
 
 html {
-    display: flex;
-    justify-content: space-around;
+   
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+
+
     margin: 0 auto;
-    margin-top: -70px;
-    margin-left: 70px;
+    margin-top: -50px;
+
 }
 body, header, ul, li, div, img {
     margin: 0;

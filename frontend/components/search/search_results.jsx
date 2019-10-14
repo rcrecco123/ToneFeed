@@ -6,7 +6,7 @@ class SearchResults extends React.Component {
         super(props)
 
         this.state = {
-
+            result: true
         }
     }
 
