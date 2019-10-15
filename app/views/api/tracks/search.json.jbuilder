@@ -1,5 +1,5 @@
 @tracks.each do |track|
-    debugger
+   
     if track.title.downcase.include?(@search_string.to_s.downcase)
   
         json.set! track.id do

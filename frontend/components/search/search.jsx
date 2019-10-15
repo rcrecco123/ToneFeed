@@ -33,18 +33,14 @@ class Search extends React.Component {
 
     render() {
         debugger
-        // if (this.props.allTracks != undefined) {
 
-        //     let trackArr = Object.values(this.props.allTracks)
-        //     debugger
-        //     let filteredTracks = this.props.trackArr.filter(
-        //         track => {
-        //             return track.name.toLowerCase()
-        //                 .indexOf(this.state.search.toLowerCase()) !== -1;
-        //         }
-        //     );
+        let searchClass;
 
-        // }
+        if (this.state.searchString == "") {
+            searchClass = "search-hidden";
+        } else {
+            searchClass = "search-list";
+        }
 
 
 
@@ -55,13 +51,17 @@ class Search extends React.Component {
                     <input className="nav-bar-search-bar" onChange={this.handleChange} name="search" />
 
                 </div>
-                <ul className="search-list">
-                    {Object.values(this.props.allTracks).map(track => {
-                        if (track.title.includes(`${this.state.searchString}`)) {
-                            return <li key={`${track.title.toString()}`
-                            }>{track.title}</li>
-                        }
-                    })}
+                <ul className={`${searchClass}`}>
+                    {
+                        Object.values(this.props.allTracks).map(track => {
+                            if (track.title.includes(`${this.state.searchString}`)) {
+                                return <li key={`${track.title.toString()}`
+                                } onClick={() => this.props.history.push(`/tracks/${track.id}`)}>{track.title}</li>
+                            }
+                        })
+
+
+                    }
                 </ul>
             </div>
         )
