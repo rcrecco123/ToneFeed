@@ -23,7 +23,7 @@ class TrackUpdate extends React.Component {
 
         formData.append('track[title]', this.state.title);
         // formData.append('track[image]', this.state.image);
-        debugger
+
         $.ajax({
             url: `/api/tracks/${this.props.match.params.id}`,
             method: "PATCH",
@@ -53,23 +53,23 @@ class TrackUpdate extends React.Component {
 
     render() {
 
-        debugger
+
 
         return (
             <div className="modal-form">
                 <form onSubmit={this.handleSubmit.bind(this)}>
-                    <br/>
+                    <br />
                     <label className="modal-label">Title
                          <input className="modal-text-box" type="text" onChange={this.handleInput('title')} />
-                     </label>
-                    <br/>
-                    <br/>
+                    </label>
+                    <br />
+                    <br />
                     <label className="modal-label">Image
                          <input type="file" onChange={this.handleFileImg.bind(this)} />
-                     </label>
+                    </label>
                     <br />
                     <br />
-                    <input className="" type="submit" value="SUBMIT!"/>
+                    <input className="" type="submit" value="SUBMIT!" />
 
                 </form>
             </div>

@@ -17,10 +17,10 @@ class TracksIndex extends React.Component {
 
     constructor(props) {
         super(props);
-//think of state as data that will change over time!
-        //debugger
+        //think of state as data that will change over time!
+
         this.state = {
-            
+
         }
     }
 
@@ -29,24 +29,24 @@ class TracksIndex extends React.Component {
         this.props.fetchTracks();
         this.props.fetchUsers();
     }
-    
+
     render() {
-        
+
         let tracks = Object.values(this.props.tracks);
-        
+
         let tracksResult = tracks.filter((track) => track['user_id'] === this.props.currentUser);
-        
-        let trackLis = tracksResult.map( track => {
+
+        let trackLis = tracksResult.map(track => {
             return (
-                <TrackIndexItem url={this.props.history.push.bind(this)} id={track.id} deleteTrack={this.props.deleteTrack} track={track} key={track.id}/>
+                <TrackIndexItem url={this.props.history.push.bind(this)} id={track.id} deleteTrack={this.props.deleteTrack} track={track} key={track.id} />
             )
         })
 
-        //debugger
+
 
         return (
             <div>
-                
+
                 <UserShow />
                 <ul>
                     {trackLis}
@@ -54,32 +54,32 @@ class TracksIndex extends React.Component {
 
             </div>
         )
-            
+
     }
-    
+
 }
 
 //gives the props any state information I want it to.
 
-        const mapStateToProps = (state) => {
-            
-            
-            return {
-                tracks: state.entities.tracks,
-                currentUser: state.session.currentUser,
-            }
-            
-        };
-        
+const mapStateToProps = (state) => {
+
+
+    return {
+        tracks: state.entities.tracks,
+        currentUser: state.session.currentUser,
+    }
+
+};
+
 // you cannot dispatch an AJAX request - only a thunk action that shoots off an AJAX request!
 
-        const mapDispatchToProps = (dispatch) => {
-            // 
-            return {
-                fetchTracks: () => dispatch(fetchTracks()),
-                fetchUsers: (users) => dispatch(fetchUsers(users)),
-                deleteTrack: id => dispatch(deleteTrack(id)),
-            }
-        };
+const mapDispatchToProps = (dispatch) => {
+    // 
+    return {
+        fetchTracks: () => dispatch(fetchTracks()),
+        fetchUsers: (users) => dispatch(fetchUsers(users)),
+        deleteTrack: id => dispatch(deleteTrack(id)),
+    }
+};
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(TracksIndex));

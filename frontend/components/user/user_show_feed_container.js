@@ -4,7 +4,7 @@ import { fetchUserShow } from '../../actions/user_actions';
 import { withRouter } from 'react-router';
 
 const mapStateToProps = (state, ownProps) => {
-    // debugger
+
     return {
         user: state.entities.users[ownProps.match.params.id],
         userId: ownProps.match.params.id

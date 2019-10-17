@@ -16,13 +16,13 @@ class TracksIndexFeed extends React.Component {
     constructor(props) {
         super(props);
         //think of state as data that will change over time!
-        //debugger
+
         this.state = {
             user: null,
             tracker: true,
             result: null
         }
-        
+
     }
 
     //put data into state for component
@@ -37,13 +37,13 @@ class TracksIndexFeed extends React.Component {
 
 
     render() {
-       
-        
+
+
 
         // if (typeof this.props.user === "object") {
         //         let tracks = Object.values(this.props.user.tracks);
 
-        //     //debugger
+
         //     let tracksResult = tracks.filter((track) => track.id === this.props.match.params.id);
 
         //     this.setState({
@@ -55,9 +55,9 @@ class TracksIndexFeed extends React.Component {
         //     })
 
         // } 
-        
+
         // let tracks = Object.values(this.props.tracks);
-        // debugger
+
         // let tracksResult = tracks.filter((track) => track['user_id'] === this.props.currentUser);
 
         // let trackLis = tracksResult.map(track => {
@@ -65,16 +65,16 @@ class TracksIndexFeed extends React.Component {
         //         <TrackIndexItem url={this.props.history.push.bind(this)} track={track} key={track.id} />
         //     )
         // })
-            
+
         //we have all the users tracks in state, now we need to run through each track
         //and pass props to each "track index item"
 
 
-        
-       
 
 
-        // debugger
+
+
+
 
         return (
             <div>
@@ -95,7 +95,7 @@ class TracksIndexFeed extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
 
-    //debugger
+
     return {
         user: state.entities.users[ownProps.match.params.id],
         currentUser: state.session.currentUser,
@@ -107,7 +107,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
 
-    //debugger
 
     return {
         fetchTracks: () => dispatch(fetchTracks()),

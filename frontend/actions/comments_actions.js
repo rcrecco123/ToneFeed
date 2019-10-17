@@ -13,7 +13,7 @@ export const receiveComment = comment => {
 }
 
 export const deleteComment = comment => {
-    //debugger
+
     return {
         type: DELETE_COMMENT,
         comment
@@ -35,11 +35,11 @@ export const createComment = comment => dispatch => {
 };
 
 export const destroyComment = comment => dispatch => {
-    //debugger
+
     return (
         CommentsUtil.destroyComment(comment)
             .then((comment) => {
-                //debugger
+
                 dispatch(deleteComment(comment))
             }
             ))

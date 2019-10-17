@@ -15,7 +15,7 @@ import Search from "../search/search_container";
 
 const NavBar = ({ currentUser, logout, openModal, history, search }) => {
 
-    // debugger
+
 
     function handleLogoutClick() {
         logout();
@@ -55,7 +55,7 @@ const NavBar = ({ currentUser, logout, openModal, history, search }) => {
 
     );
 
-    // debugger
+
 
     return currentUser ? loggedInBar() : null;
 

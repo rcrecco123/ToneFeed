@@ -57,19 +57,19 @@ class TrackIndexItem extends React.Component {
     }
 
     likeButtonClick() {
-        debugger
+
         const likeButton = document.getElementById(`likeButton${this.props.track.id}`);
         likeButton.setAttribute('color', "#f50");
     }
 
     render() {
-        //debugger
+
 
 
         if (this.state.ws) {
             this.state.ws.load(this.props.track.fileUrl)
         };
-        //debugger
+
 
         // <div><h3 className="link-to-show" onClick={() => { this.props.history.push(`/tracks/${this.props.track.id}`) }}>{track.title}</h3></div>
         return (

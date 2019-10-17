@@ -4,10 +4,10 @@ import { fetchComments, createComment, destroyComment } from "../../actions/comm
 import { fetchTrack } from '../../actions/tracks_actions';
 
 const mapStateToProps = (state, ownProps) => {
-    
+
 
     // const trackId = this.props.match.params.id;
-    //debugger
+
     return {
         comments: state.entities.comments,
         user: state.entities.users[state.session.currentUser]

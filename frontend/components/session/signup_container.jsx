@@ -28,7 +28,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => {
-    // debugger
+
     return {
         createNewUser: formUser => dispatch(createNewUser(formUser)),
         processForm: (user) => dispatch(login(user)),

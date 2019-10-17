@@ -6,14 +6,14 @@ import { withRouter } from 'react-router-dom';
 import { searchTracks } from "../../actions/tracks_actions";
 
 // const mapStateToProps = ({ session, entities: { users } }) => {
-//     debugger
+
 //     return {
 //         currentUserId: session.currentUser,
 //         currentUser: session.currentUserv
 //     }
 // };
 const mapStateToProps = (state) => {
-    // debugger
+
     return {
         // currentUserId: session.currentUser,
         currentUser: state.entities.users[state.session.currentUser],
@@ -22,7 +22,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => {
-    // debugger
+
     return {
         closeModal: () => dispatch(closeModal()),
         logout: () => dispatch(logout()),

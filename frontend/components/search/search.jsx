@@ -9,7 +9,7 @@ class Search extends React.Component {
         this.state = {
             searchString: ""
         }
-        // debugger
+
         this.handleChange = this.handleChange.bind(this);
         this.submitSearch = this.submitSearch.bind(this);
 
@@ -38,7 +38,7 @@ class Search extends React.Component {
     // }
 
     render() {
-        debugger
+
 
         let searchClass;
 

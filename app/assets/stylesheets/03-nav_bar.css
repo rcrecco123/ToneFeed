@@ -14,18 +14,22 @@
 
 .nav-bar-search-bar{
   width: 400px;
-  height: 15px;
+  height: 41.5px;
   margin-top: 8px;
   padding: 5px;
+  border: none;
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
 }
 
 .search-list {
   border: 1px solid black;
   list-style-type: none;
+  background: white;
 }
 
 .search-result-title {
   cursor: pointer;
+  font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
 }
 
 .search-result-title:hover {
