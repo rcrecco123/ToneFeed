@@ -31,6 +31,12 @@ class Search extends React.Component {
 
     }
 
+    // shouldComponentUpdate(nextProps, nextState) {
+    //     if (this.props.history != nextProps.history) {
+    //         this.state.searchString = "";
+    //     }
+    // }
+
     render() {
         debugger
 
@@ -55,7 +61,7 @@ class Search extends React.Component {
                     {
                         Object.values(this.props.allTracks).map(track => {
                             if (track.title.includes(`${this.state.searchString}`)) {
-                                return <li key={`${track.title.toString()}`
+                                return <li className="search-result-title" key={`${track.title.toString()}`
                                 } onClick={() => this.props.history.push(`/tracks/${track.id}`)}>{track.title}</li>
                             }
                         })

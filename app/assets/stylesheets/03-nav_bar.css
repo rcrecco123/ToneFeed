@@ -24,6 +24,14 @@
   list-style-type: none;
 }
 
+.search-result-title {
+  cursor: pointer;
+}
+
+.search-result-title:hover {
+  background: orange;
+}
+
 .search-hidden {
   opacity: 0;
 }
