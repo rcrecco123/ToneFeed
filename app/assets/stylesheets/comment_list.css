@@ -1,4 +1,3 @@
-
 .comments-list-final {
     display: flex;
     margin: auto;
@@ -11,7 +10,6 @@
     border-radius: 50%;
     margin: none;
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
-    
 }
 
 .user-avatar-list {
@@ -36,7 +34,6 @@
     margin-left: 15px;
     border: 1px;
     border-color: rgba(121, 121, 121, 0.548);
-    
 }
 
 .comment-list-item-box-p{
@@ -51,7 +48,6 @@
     margin: none;
     margin-top: 0px;
     margin-right: 4px;
-    
 }
 
 .comment-list-item-box-p > p {
@@ -85,7 +81,6 @@
 }
 
 .fa-trash-alt{
-
     cursor: pointer;
     margin-left: 810px;
 }
@@ -95,13 +90,12 @@
     margin-left: 70px;
     margin-top: 25px;
     margin-bottom: 25px;
-    
 }
 
 .comment-count-part{
-    display: inline-block;
+    display: flex;
     margin-bottom: 25px;
-
+    position: relative;
 }
 
 .users-track-window{
@@ -131,7 +125,6 @@
 }
 
 .two-boxes-comment-list{ 
-
     display: flex;
     margin-top: 50px;
 }

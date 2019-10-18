@@ -1,11 +1,14 @@
 .comment-input {
   padding: 3px;  
   width: 760px;
-  margin-right: -50px;
 }
 
 .comment-main {
     margin-left: 32px;
+}
+
+.fa-edit{
+  margin-left: -1070px;
 }
 
 .comment-form-main {
@@ -16,7 +19,6 @@
 
 .form-comment {
   font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
-  margin: auto;
   margin-left: 12px;
   border: .25px transparent;
   padding: 8px;

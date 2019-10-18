@@ -65,8 +65,6 @@ class Search extends React.Component {
                                 } onClick={() => this.props.history.push(`/tracks/${track.id}`)}>{track.title}</li>
                             }
                         })
-
-
                     }
                 </ul>
             </div>
