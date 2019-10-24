@@ -42,7 +42,7 @@ class Splash extends React.Component {
                                 <h2 className="image-1-text">Explore with ToneFeed</h2>
                                 <span className="image-1-text-body"> Discover new music with ToneFeed</span>
                             </div>
-                            <img src="https://a-v2.sndcdn.com/assets/images/home/hp_image_creator_slide-50cfacf.jpg" alt="image1"></img>
+                            <img src="https://a-v2.sndcdn.com/assets/images/home/hp_image_creator_slide-50cfacf.jpg" className="image-1-box-image" alt="image1"></img>
                         </li>
                         <li>
                             <div className="image-2-box">
@@ -58,16 +58,16 @@ class Splash extends React.Component {
 
 
                     {/* <div className="pokemon-pic"></div> */}
-                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
-                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
-                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
-                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
-                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
-                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
-                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
-                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
-                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
-                    <img className="pokemon-pic" src="https://i.imgur.com/qaSO1hP.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5c19fa46045473.584638b38e808.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://images.squarespace-cdn.com/content/v1/5ae494aa45776e3997215535/1525183861821-KAHK2Z7F8NERYNY64S25/ke17ZwdGBToddI8pDm48kJK4Mm1kch8SFO9ZNkN1NT97gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmFk_H6M1tkD9NpL7mXac0oVSXdFfjxR5AjcLwGSebOiGBsFzzcw3xKxvyC_6CFFG_/the+ride+11.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://art.ngfiles.com/images/640000/640689_thedefector_concept-album-art-muse.png?f1536667181" alt="" />
+                    <img className="pokemon-pic" src="https://cdn.dribbble.com/users/3505439/screenshots/6656913/sedum_-_promo-afcomp211.jpg" alt="" />
+                    <img className="pokemon-pic" src="http://johnniesvillapizza.com/wp-content/uploads/220px-Dark_Side_of_the_Moon.png" alt="" />
+                    <img className="pokemon-pic" src="http://www.dopedavidphotos.com/uploads/8/0/0/3/80038364/more-life-dope-david-photos_orig.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://static.wixstatic.com/media/c3a84a_cd48a83f545344479a463c471ac59776~mv2_d_1338_1338_s_2.jpg/v1/fill/w_1338,h_1338,al_c,q_90/file.jpg" alt="" />
+                    <img className="pokemon-pic" src="https://www.nuclearblast.de/static/articles/130/130921.jpg/1000x1000.jpg" alt="" />
+                    <img className="pokemon-pic" src="http://www.brooklynvegan.com/files/img/music2/anaishades.jpg?zc=1&s=0&a=t&q=89&w=470" alt="" />
+                    <img className="pokemon-pic" src="https://puregrainaudio.com/images/blogimages/26696.jpg" alt="" />
 
                 </div>
                 {/* <TrackSplash getRandomTracks={this.props.getRandomTracks} /> */}

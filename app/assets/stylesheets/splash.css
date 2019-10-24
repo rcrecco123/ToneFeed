@@ -10,7 +10,7 @@ html {
 
 
     margin: 0 auto;
-    margin-top: -50px;
+    margin-top: -70px;
 
 }
 body, header, ul, li, div, img {
@@ -142,11 +142,16 @@ body {
     color: white;
 }
 
+.image-1-box-image{
+    text-align: center;
+}
+
 .image-1-text-box {
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
     color: white;
 }
 .image-1-text {
+    font-size: 50px;
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
     color: white;
     position: absolute;
@@ -155,12 +160,15 @@ body {
     transform: translate(-50%, -50%);
 }
 
+
 .image-1-text-body {
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
     color: white;
     position: absolute;
     top: 60%;
     left: 50%;
+    margin-top: 15px;
+     font-size: 25px;
     transform: translate(-50%, -50%);
 }
 
@@ -171,6 +179,7 @@ body {
     top: 40%;
     left: 50%;
     margin: 0 auto;
+   
     transform: translate(-50%, -50%);
     transform: translateX(1240px);
 }
@@ -292,6 +301,8 @@ body {
     display: grid;
     grid-gap: 75px 150px;
     margin-bottom: -25px;
+    position: absolute;
+    width: 800px;
 }
 
 .pokemon-pic {
