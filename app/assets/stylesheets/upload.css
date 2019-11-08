@@ -2,14 +2,11 @@
 
 .upload-form {
     margin: 0 auto;
-    /* width: 1240px;
-    height: 70px;    */
+ 
 }
 
 .upload-form-div {
     margin: 0;
-    margin-left: 575px;
-
 }
 
 
@@ -34,6 +31,7 @@
 
 .custom-file-upload {
     margin-top: 50px;
+    margin: 50 auto;
     cursor: pointer;
     display: flex; 
     align-self: center;

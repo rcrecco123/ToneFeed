@@ -3,14 +3,9 @@
     margin: 0px auto;
     background-color: rgba(223, 223, 223, 0.603);
     position: relative;
-    display: flex;
     margin-top: 70px;
-text-align: center;
+    text-align: center;
 }
-/* 
-.root-two {
-display: flex;
-} */
 
 .master-html{
     margin: -10px;
