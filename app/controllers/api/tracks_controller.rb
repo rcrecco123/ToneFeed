@@ -44,26 +44,26 @@ class Api::TracksController < ApplicationController
         end
     end
 
-    def search
+    # def search
 
  
        
-        @params = params
+    #     @params = params
 
-        @search_string = params[:search]
+    #     @search_string = params[:search]
 
   
 
-        search = params[:search]
+    #     search = params[:search]
 
-        @tracks = Track.where("title LIKE ?", "#{search}") #GET THAT FROM PARAMS params[:search].to_s
+    #     @tracks = Track.where("title LIKE ?", "#{search}") #GET THAT FROM PARAMS params[:search].to_s
     
 
-        if @tracks
-            render "api/tracks/search"
-        end
+    #     if @tracks
+    #         render "api/tracks/search"
+    #     end
 
-    end
+    # end
 
 
     def track_params
