@@ -39,7 +39,7 @@ const NavBar = ({ currentUser, logout, openModal, history, search }) => {
                 ToneFeed
                 </h2>
 
-            <div className="search-bar-div">
+            <div>
                 {/* <i className="fas fa-search"></i>
                 <input className="nav-bar-search-bar" type="text" value="Enter artist, song, album, or genre!" /> */}
                 <Search search={search} />

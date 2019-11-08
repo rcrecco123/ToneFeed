@@ -52,10 +52,9 @@ class Search extends React.Component {
 
         return (
             <div>
-                <div>
+                <div className="search-bar-div">
                     <button className="fas fa-search" onClick={() => { this.props.search(this.state.searchString) }}></button>
                     <input className="nav-bar-search-bar" autoComplete="off" onChange={this.handleChange} name="search" />
-
 
                 </div>
                 <ul className={`${searchClass}`}>
