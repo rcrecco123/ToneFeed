@@ -1,3 +1,22 @@
 .modal-update-submit{
-    
+    width: 100%;
+}
+
+.modal-label-update {
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+}
+
+.modal-label-upate-sub {
+    border: 5px;
+    font-weight: normal;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    background-color: #f50;
+    color: white;
+    border-color: #f50;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: 100;
+    padding: 5px;
+    margin-top: 35px;
+    cursor: pointer;
 }

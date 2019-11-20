@@ -12,29 +12,31 @@ class TrackShow extends React.Component {
             playing: false,
             ws: null
         }
-        
+
         this.playClick = this.playClick.bind(this);
-        
+
     }
 
-        // calling 'fetchTrack(id) retrieves the track 
-        // and puts it into state under
-        // state.entities.tracks via reducer.
+    // calling 'fetchTrack(id) retrieves the track 
+    // and puts it into state under
+    // state.entities.tracks via reducer.
     componentDidMount() {
         this.props.fetchTrack(this.props.match.params.id);
         this.props.fetchUsers();
 
-        this.setState({ ws: WaveSurfer.create({
-            container: '#waveform',
-            waveColor: 'rgb(220,220,220)',
-            progressColor: '#f50',
-            barGap: 0,
-            barWidth: 2,
-            hideScrollbar: true,
-            cursorColor: 'transparent'
+        this.setState({
+            ws: WaveSurfer.create({
+                container: '#waveform',
+                waveColor: 'rgb(220,220,220)',
+                progressColor: '#f50',
+                barGap: 0,
+                barWidth: 2,
+                height: 250,
+                hideScrollbar: true,
+                cursorColor: 'transparent'
+            })
         })
-        }) 
-    } 
+    }
 
     toggleClass() {
         const oldStyle = document.getElementById('test').className;
@@ -49,12 +51,12 @@ class TrackShow extends React.Component {
 
     render() {
 
-        
+
 
         //handles this.props.track on first render (track = null if track === undefined)
         if (this.props.track) {
             var track = Object.values(this.props.track);
-            
+
             var userName = this.props.user.username;
             var trackTitle = this.props.track.title;
             var trackFileUrl = this.props.track.fileUrl;
@@ -71,8 +73,8 @@ class TrackShow extends React.Component {
         if (this.state.ws) {
             this.state.ws.load(trackFileUrl)
         };
-        
-        
+
+
         return (
             <div id="main-show" className="main-show">
                 <div className="track-show-info">
@@ -87,24 +89,27 @@ class TrackShow extends React.Component {
                     <div>
 
                         <div>
-                            <br/>
+                            <br />
                             <div className="track-show-user" onClick={() => {
                                 this.props.history.push("/feed");
                             }}>
                                 {userName}
                             </div>
-                            <br/>
+                            <br />
                             <div className="track-show-title">
                                 {trackTitle}
                             </div>
+
                         </div>
-
+                        <div>
+                            <i className="far fa-edit" onClick={() => this.props.openModal('trackUpdate')}></i>
+                        </div>
                     </div>
-                    
-                                    <div className="waveform-show" id="waveform"></div>
-                </div>    
 
-                                <img className="image-show" src={trackImg} alt=""/>    
+                    <div className="waveform-show" id="waveform"></div>
+                </div>
+
+                <img className="image-show" src={trackImg} alt="" />
             </div>
         )
     }

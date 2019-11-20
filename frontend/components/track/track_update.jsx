@@ -56,15 +56,15 @@ class TrackUpdate extends React.Component {
 
 
         return (
-            <div className="modal-form">
+            <div className="modal-form-update">
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     <br />
-                    <label className="modal-label">Title
+                    <label className="modal-label-update">Title
                          <input className="modal-text-box" type="text" onChange={this.handleInput('title')} />
                     </label>
                     <br />
                     <br />
-                    <label className="modal-label">Image
+                    <label className="modal-label-update">Image
                          <input type="file" onChange={this.handleFileImg.bind(this)} />
                     </label>
                     <br />

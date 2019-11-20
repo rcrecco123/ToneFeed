@@ -3,7 +3,6 @@
     width: 1240px;
     height: 380px;
     background-color: grey;
-    margin-top: 50px;
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
 }
 
@@ -59,20 +58,25 @@
 .track-waveform-div {
     margin: none;
     width: 825px;
-    height: 155px;
+    height: 125px;
+    position: absolute;
 }
 
 .waveform-show {
+    margin-top: 250px;
     width: 100%;
-    height: 100%;
+    height: 75%;
     margin-left: 7px;
+
 }
 
 #waveform {
+    margin-top: 45px;
     position: absolute;
     bottom: 0;
+margin-bottom: 150px;
     width: 825px;
-    height: 155px;
+    height: 105px;
 }
 
 .play-button-outer {

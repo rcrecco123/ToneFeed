@@ -1,5 +1,6 @@
 import { fetchTrack } from '../../actions/tracks_actions';
 import { fetchUsers } from "../../actions/user_actions";
+import { openModal } from "../../actions/modal_actions";
 import { connect } from 'react-redux';
 import TrackShow from './track_show';
 
@@ -19,7 +20,8 @@ const mapDispatchToProps = (dispatch) => {
 
     return {
         fetchTrack: (id) => dispatch(fetchTrack(id)),
-        fetchUsers: () => dispatch(fetchUsers())
+        fetchUsers: () => dispatch(fetchUsers()),
+        openModal: (modal) => dispatch(openModal(modal))
     }
 
 }

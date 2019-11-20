@@ -12,6 +12,7 @@ class Search extends React.Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.submitSearch = this.submitSearch.bind(this);
+        this.handleClickTrack = this.handleClickTrack.bind(this);
 
     }
 
@@ -23,12 +24,19 @@ class Search extends React.Component {
 
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
 
     }
 
     submitSearch() {
 
+    }
+
+    handleClickTrack() {
+        this.setState({
+            searchString: ""
+        })
+        this.props.history.push(`/tracks/${track.id}`)
     }
 
     // shouldComponentUpdate(nextProps, nextState) {

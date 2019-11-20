@@ -53,9 +53,10 @@
 
 
 .track-index-item-waveform{
+  height: 200px;
   width: 700px;
   margin-left: 225px;
-  margin-top: 50px;
+  margin-top: 65px;
   position: absolute;
 }
 

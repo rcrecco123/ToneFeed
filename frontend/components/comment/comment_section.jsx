@@ -16,12 +16,12 @@ class Comments extends React.Component {
     }
 
     changeButtonState() {
-        
+
     }
 
     render() {
-        
-        
+
+
         return (
             <div className="comment-main">
                 <CommentForm track={this.props.track} />
