@@ -1,6 +1,7 @@
 .user-show-banner {
     position: relative;
     display: flex;
+    margin: 0 auto;
     width: 1240px;
     height: 250px;
     background-color: grey;

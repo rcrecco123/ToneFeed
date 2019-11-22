@@ -86,16 +86,20 @@
 }
 
 .fa-comment-alt{
+    
     color: rgba(133, 133, 133, 0.671);
-    margin-left: 70px;
-    margin-top: 25px;
+    margin-left: 60px;
+    margin-right: 6px;
     margin-bottom: 25px;
 }
 
 .comment-count-part{
+    text-align: center;
+    font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
     display: flex;
     margin-bottom: 25px;
     position: relative;
+    color: rgba(133, 133, 133, 0.671);
 }
 
 .users-track-window{

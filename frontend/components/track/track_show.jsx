@@ -90,6 +90,7 @@ class TrackShow extends React.Component {
 
                         <div>
                             <br />
+
                             <div className="track-show-user" onClick={() => {
                                 this.props.history.push("/feed");
                             }}>
@@ -99,16 +100,13 @@ class TrackShow extends React.Component {
                             <div className="track-show-title">
                                 {trackTitle}
                             </div>
-
                         </div>
-                        <div>
-                            <i className="far fa-edit" onClick={() => this.props.openModal('trackUpdate')}></i>
-                        </div>
+                        <i className="far fa-edit" onClick={() => this.props.openModal('trackUpdate')}></i>
                     </div>
 
                     <div className="waveform-show" id="waveform"></div>
-                </div>
 
+                </div>
                 <img className="image-show" src={trackImg} alt="" />
             </div>
         )

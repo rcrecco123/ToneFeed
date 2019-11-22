@@ -13,15 +13,21 @@
     background-color: black;
     display: block;
     text-align: center;
+    justify-content: space-between !important;
 }
 
-/* .app-reset{
-display: block;
+.app-reset{
+display: flex;
+flex-direction: column;
 margin:0px;
 padding:0px;
+height: 100%;
 position: relative;
-} */
+}
 
+#html{
+  justify-content: space-between !important;
+}
 /* .fa-thumbs-up:active{
   color: #f50;
 } */

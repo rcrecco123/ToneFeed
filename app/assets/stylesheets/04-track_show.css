@@ -3,7 +3,9 @@
     width: 1240px;
     height: 380px;
     background-color: grey;
+    margin: 0 auto;
     font-family: "Interstate","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Garuda,Verdana,Tahoma,sans-serif;
+    margin-top: 50px;
 }
 
 .main-show {
@@ -119,4 +121,8 @@ margin-bottom: 150px;
 
 .play-button-outer:hover {
     background-color: rgb(187, 64, 3);
+}
+
+.fa-edit {
+    position: relative;
 }

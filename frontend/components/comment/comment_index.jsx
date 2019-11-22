@@ -44,7 +44,8 @@ class CommentIndex extends React.Component {
 
                     <div className="all-comments-container">
                         <div className="comment-count-part">
-                            <i className="fas fa-comment-alt"> {results.length} comments</i>
+                            <i className="fas fa-comment-alt"></i>
+                            <div>{results.length} comments</div>
                         </div>
                     </div>
                     <ul className="ul-comments">
