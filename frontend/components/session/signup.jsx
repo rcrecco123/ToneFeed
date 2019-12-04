@@ -21,7 +21,7 @@ class Signup extends React.Component {
 
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.push = this.push.bind(this);
+
 
     }
 
